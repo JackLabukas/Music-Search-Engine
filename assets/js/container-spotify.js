@@ -16,10 +16,10 @@ function searchSpotify(artist) {
   $.ajax(settings).done(function (response) {
     console.log(response.albums.items);
     response.albums.items.forEach(function (album) {
-      //   console.log(album.data.name);
-      var albumDiv = $("<div>");
-      albumDiv.val(album.data.name);
-      $("#trendingMain").append(albumDiv);
+      //   $("div").text("hello");
+      $("#trendingMain")
+        .append(`<div>${album.data.name}</div>`)
+        .css("background-color", "black");
     });
   });
 }
