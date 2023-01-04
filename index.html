@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Cloudflare CSS icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <!-- Page Title-->
+  <title>Music Search Engine</title>
+</head>
+
+<body>
+  <!-- APP Title-->
+  <header class="container-fluid text-center text-white bg-dark p-2">
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="" width="30" height="30" class="d-inline-block align-top"
+          alt=""> Music Search Engine
+      </a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+      </form>
+    </nav>
+    <!-- Display an alert for invalid artist or band name -->
+    <div class="alert alert-warning modal-lg" role="alert" id="ms-alert" style="visibility: hidden;">
+      Please enter a valid artist or band name.
+      <button type="button" class="close" onclick="alertClose()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- max-width for ultra wide resolutions -->
+  <div class="container-fluid" style="max-width: 1400px">
+    <div class="row">
+
+      <div class="col-lg-9 pb-3">
+
+        <!-- Jumbotron to display the user search results (wikipedia key facts) -->
+        <section id="jumbotron" class="row mt-3" role="region" aria-live="polite">
+        </section>
+
+        <!-- What's Trending Main Element (spotify results) -->
+        <section id="trendingMain" class="row mt-3" role="region" aria-live="polite">
+        </section>
+
+        <!-- What's Trending Side Element (spotify results) -->
+        <section id="trendingSide" class="row mt-3" role="region" aria-live="polite">
+        </section>
+
+        <!-- Meet the team Element-->
+        <section id="team" class="row mt-3" role="region" aria-live="polite">
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer / Contact element  -->
+  <footer class="container-fluid text-white bg-dark p-2">
+    <div class="footer-basic">
+
+      <!-- Search user's history -->
+      <div id="history" class="list-group"></div>
+
+      <!-- Clear the search user's history -->
+      <hr class="my-2 " style="background-color:rgba(255, 255, 255, 0.966)" />
+      <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
+
+      <!-- technology -->
+      <ion-icon name="pause-circle"></ion-icon>
+      <p class="copyright text-center">Bootstrap 4</p>
+    </div>
+  </footer>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- javaScript -->
+  <!-- <script src="./assets/js/container-wikipedia.js" type="text/javascript"></script> -->
+  <!-- <script src="./assets/js/container-spotify.js" type="text/javascript"></script> -->
+  <script src="./assets/js/container-localstorage.js" type="text/javascript"></script>
+  <!-- <script src="./assets/js/script.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
