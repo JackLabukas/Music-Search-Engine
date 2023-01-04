@@ -3,8 +3,6 @@
 const wikipediaAPIKey = "";
 const spotifyAPIKey = "c1ec80a3b6msh5a59fdbd8715fddp1e8eb2jsn5706ec8ba70f";
 
-// "https://spotify23.p.rapidapi.com/search/?q=" + artist + "&type=multi&offset=0&limit=10&numberOfTopResults=5";
-
 
 var pastUserSearch = $('#history');
 
@@ -31,35 +29,42 @@ displaySearchHistory()
 
 // Function to check if the user search return any value  
 function checkSearch(userSearch) {
- /* 
-  var spotifyURL = "" + spotifyAPIKey;
-  $.ajax({
-    url: spotifyURL,
-    method: "GET"
-  })
-    .then(function (response) {
+    const settings = {
+    async: true,
+    crossDomain: true,
+    url:
+      "https://spotify23.p.rapidapi.com/search/?q=" + userSearch + "&type=multi&offset=0&limit=10&numberOfTopResults=5",
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": spotifyAPIKey,
+      "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
+    },
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    // Check the response length
+    if (response.artists.totalCount === 0) {
+      // Display an alert for invalid user search
+      document.getElementById('ms-alert').style.visibility = 'visible';
+    } else {
 
-      // Check the response length
-      if (response.length === 0) {
-        // Display an alert for invalid user search
-        document.getElementById('ms-alert').style.visibility = 'visible';
-      } else {
-*/
-        // Save into the local storage the user search
-        saveSearch(userSearch);
+      // Save into the local storage the user search
+      saveSearch(userSearch);
 
-        // Display into the search history the new user search
-        displaySearchHistory();
+      // Display into the search history the new user search
+      displaySearchHistory();
 
-        // Display Wikipedia data into HTML
-       // searchWikipedia(userSearch);
+      // Display Wikipedia data into HTML
+      // searchWikipedia(userSearch);
 
-        // Display Spotify data into HTML
+      // Display Spotify data into HTML
       //  searchSpotify(userSearch);
-/*      };
-    });*/
+      /*      };
+          });*/
+    };
+  });
 };
-
 // .on("click") function associated with the Search Button
 $("#search-button").on("click", function (event) {
   event.preventDefault();
