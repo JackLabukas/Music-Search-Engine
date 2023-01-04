@@ -1,4 +1,4 @@
-function searchArtist(artist) {
+function searchSpotify(artist) {
   const settings = {
     async: true,
     crossDomain: true,
@@ -14,9 +14,12 @@ function searchArtist(artist) {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    console.log(response.albums.items);
+    response.albums.items.forEach(function (album) {
+      //   console.log(album.data.name);
+      var albumDiv = $("<div>");
+      albumDiv.val(album.data.name);
+      $("#trendingMain").append(albumDiv);
+    });
   });
 }
-
-$("#trendingMain").text("hello");
-$("#trendingSide").text("hello");
