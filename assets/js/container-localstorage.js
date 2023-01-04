@@ -1,7 +1,10 @@
 // Spotify & Wikipedia API Keys
 
 const wikipediaAPIKey = "";
-const spotifyAPIKey = "";
+const spotifyAPIKey = "c1ec80a3b6msh5a59fdbd8715fddp1e8eb2jsn5706ec8ba70f";
+
+"https://spotify23.p.rapidapi.com/search/?q=" + artist + "&type=multi&offset=0&limit=10&numberOfTopResults=5";
+
 
 var pastUserSearch = $('#history');
 
@@ -29,9 +32,9 @@ displaySearchHistory()
 // Function to check if the user search return any value  
 function checkSearch(userSearch) {
  /* 
-  var wikipediaURL = "" + wikipediaAPIKey;
+  var spotifyURL = "" + spotifyAPIKey;
   $.ajax({
-    url: wikipediaURL,
+    url: spotifyURL,
     method: "GET"
   })
     .then(function (response) {
