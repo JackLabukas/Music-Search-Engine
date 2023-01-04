@@ -26,8 +26,7 @@
     <!-- Image and text -->
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="" width="30" height="30" class="d-inline-block align-top"
-          alt=""> Music Search Engine
+        <img src="" width="30" height="30" class="d-inline-block align-top" alt=""> Music Search Engine
       </a>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
@@ -73,32 +72,29 @@
   <footer class="container-fluid text-white bg-dark p-2">
     <div class="footer-basic">
 
-
       <div class="row">
-        <div class="col">
-          1 of 3
+
+        <!-- Search user's history -->
+        <div id="history" class="col">
         </div>
+        
         <div class="col-md-auto">
-          Variable width content
         </div>
-        <div class="col col-lg-2">
+
+        <!-- Meet the team -->
+        <div id="team" class="col col-lg-2">
           Meet the team
         </div>
       </div>
     </div>
 
+    <!-- Clear the search user's history -->
+    <hr class="my-2 " style="background-color:rgba(255, 255, 255, 0.966)" />
+    <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
 
-
-      <!-- Search user's history -->
-      <div id="history" class="list-group"></div>
-
-      <!-- Clear the search user's history -->
-      <hr class="my-2 " style="background-color:rgba(255, 255, 255, 0.966)" />
-      <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
-
-      <!-- technology -->
-      <ion-icon name="pause-circle"></ion-icon>
-      <p class="copyright text-center">Bootstrap 4</p>
+    <!-- technology -->
+    <ion-icon name="pause-circle"></ion-icon>
+    <p class="copyright text-center">Bootstrap 4</p>
     </div>
   </footer>
 
@@ -120,7 +116,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>

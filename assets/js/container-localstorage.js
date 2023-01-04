@@ -105,7 +105,7 @@ function displaySearchHistory() {
   for (i = 0; i < searchedHistory.length; i++) {
     var newBTN = document.createElement("button");
     newBTN.classList.add("btn", "btn-success", "my-2", "past-search");
-    newBTN.setAttribute("style", "width: 100%");
+    newBTN.setAttribute("style", "padding: 20px");
     newBTN.setAttribute("id", "saved-search-bt");
     newBTN.textContent = `${searchedHistory[i]}`;
     historyEl.appendChild(newBTN);
