@@ -3,52 +3,51 @@
 const wikipediaAPIKey = "";
 const spotifyAPIKey = "c1ec80a3b6msh5a59fdbd8715fddp1e8eb2jsn5706ec8ba70f";
 
-
-var pastUserSearch = $('#history');
+var pastUserSearch = $("#history");
 
 // function to hide the invalid user search alert
 function alertClose() {
-  document.getElementById('ms-alert').style.visibility = 'hidden';
-};
+  document.getElementById("ms-alert").style.visibility = "hidden";
+}
 
-// clear the local storage and the searches history 
+// clear the local storage and the searches history
 function clearHistory() {
-
   // if is visible then hide the invalid user search alert
-  alertClose()
+  alertClose();
   // clear the local storage
   localStorage.clear();
-  var historyEl = document.getElementById('history');
-  // clear the searches history 
-  historyEl.innerHTML = '';
+  var historyEl = document.getElementById("history");
+  // clear the searches history
+  historyEl.innerHTML = "";
   return;
 }
 
 // Display search history function
-displaySearchHistory()
+displaySearchHistory();
 
-// Function to check if the user search return any value  
+// Function to check if the user search return any value
 function checkSearch(userSearch) {
-    const settings = {
+  const settings = {
     async: true,
     crossDomain: true,
     url:
-      "https://spotify23.p.rapidapi.com/search/?q=" + userSearch + "&type=multi&offset=0&limit=10&numberOfTopResults=5",
+      "https://spotify23.p.rapidapi.com/search/?q=" +
+      userSearch +
+      "&type=multi&offset=0&limit=10&numberOfTopResults=5",
     method: "GET",
     headers: {
       "X-RapidAPI-Key": spotifyAPIKey,
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };
-  
+
   $.ajax(settings).done(function (response) {
     console.log(response);
     // Check the response length
     if (response.artists.totalCount === 0) {
       // Display an alert for invalid user search
-      document.getElementById('ms-alert').style.visibility = 'visible';
+      document.getElementById("ms-alert").style.visibility = "visible";
     } else {
-
       // Save into the local storage the user search
       saveSearch(userSearch);
 
@@ -62,46 +61,28 @@ function checkSearch(userSearch) {
       //  searchSpotify(userSearch);
       /*      };
           });*/
-    };
+    }
   });
-};
-// .on("click") function associated with the Search Button
-$("#search-button").on("click", function (event) {
-  event.preventDefault();
-
-  // User Search
-  var userSearch = $("#search-input")
-    .val()
-    .trim();
-
-  $("#search-input").val('');
-
-  if (userSearch != "") {
-    // Get data from the user search
-    checkSearch(userSearch);
-  } else {
-    // Display an alert for invalid search
-    document.getElementById('ms-alert').style.visibility = 'visible';
-  };
-
-});
+}
 
 // Save into the local storage the user search
 function saveSearch(userSearch) {
-  var storedSearches = JSON.parse(localStorage.getItem("UserSearchMusic")) || [];
+  var storedSearches =
+    JSON.parse(localStorage.getItem("UserSearchMusic")) || [];
 
   // check if the local storage includes the user search and the number of saved searches
   if (!storedSearches.includes(userSearch) && storedSearches.length < 10) {
     storedSearches.push(userSearch);
     localStorage.setItem("UserSearchMusic", JSON.stringify(storedSearches));
-  };
-};
+  }
+}
 
 // Display search history function
 function displaySearchHistory() {
-  var searchedHistory = JSON.parse(localStorage.getItem("UserSearchMusic")) || [];
-  var historyEl = document.getElementById('history');
-  historyEl.innerHTML = '';
+  var searchedHistory =
+    JSON.parse(localStorage.getItem("UserSearchMusic")) || [];
+  var historyEl = document.getElementById("history");
+  historyEl.innerHTML = "";
   for (i = 0; i < searchedHistory.length; i++) {
     var newBTN = document.createElement("button");
     newBTN.classList.add("btn", "btn-success", "my-2", "past-search");
@@ -110,7 +91,7 @@ function displaySearchHistory() {
     newBTN.textContent = `${searchedHistory[i]}`;
     historyEl.appendChild(newBTN);
   }
-};
+}
 
 // .on("click") function associated with the Save Searches Button
 function savedSearch(event) {
@@ -119,6 +100,5 @@ function savedSearch(event) {
 
   // Get data from the user Search
   checkSearch(userSearch);
-
-};
+}
 pastUserSearch.on("click", savedSearch);

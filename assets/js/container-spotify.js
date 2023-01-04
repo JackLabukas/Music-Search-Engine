@@ -12,19 +12,11 @@ function searchArtist(artist) {
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };
-  
+
   $.ajax(settings).done(function (response) {
     console.log(response);
   });
 }
 
-$("#search-button").on("click", function (event) {
-  event.preventDefault();
-  var inputArtist = $("#artist-input").val();
-  searchArtist(inputArtist);
-});
-
 $("#trendingMain").text("hello");
 $("#trendingSide").text("hello");
-
-
