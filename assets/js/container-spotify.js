@@ -17,9 +17,20 @@ function searchSpotify(artist) {
     console.log(response.albums.items);
     response.albums.items.forEach(function (album) {
       //   $("div").text("hello");
-      $("#trendingMain")
-        .append(`<div>${album.data.name}</div>`)
-        .css("background-color", "black");
+      // $("#trendingMain")
+      //   .append(`<div>${album.data.name}</div>`)
+      //   .css("background-color", "black");
+      //top 10 albums
+      var albumButton = $("<button>");
+      albumButton.text(album.data.name);
+      $("#trendingMain").append(albumButton);
+    });
+    //top 10 tracks
+    response.tracks.items.forEach(function (track) {
+      console.log(response.tracks.items);
+      var trackButton = $("<button>");
+      trackButton.text(track.data.name);
+      $("#trendingSide").append(trackButton);
     });
   });
 }
