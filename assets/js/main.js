@@ -37,7 +37,7 @@ function clearHistory() {
   // clear the local storage
   localStorage.clear();  
   var historyEl = document.getElementById("history");
-  
+
   // clear the searches history
   historyEl.innerHTML = "";
   return;
@@ -77,7 +77,7 @@ function checkSearch(userSearch) {
         displaySearchHistory();
   
         // Display Wikipedia data into HTML
-        // searchWikipedia(userSearch);
+        searchWikipedia(userSearch);
   
         // Display Spotify data into HTML
         searchSpotify(userSearch);
