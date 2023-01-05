@@ -1,30 +1,30 @@
-function searchWikipedia(userSearch)
-{
-console.log(userSearch);
+function searchWikipedia(userSearch) {
+    console.log(userSearch);
 
-// Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
-var queryURL = "https://rest.bandsintown.com/artists/" + userSearch + "?app_id=codingbootcamp";
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response) {
+    // Querying the bandsintown api for the selected artist
+    var queryURL = "https://rest.bandsintown.com/artists/" + userSearch + "?app_id=codingbootcamp";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
 
-  // Printing the entire object to console
-  console.log(response);
+        console.log(response);
 
-  // Constructing HTML containing the artist information
-  var artistName = $("<h1>").text(response.name);
-  var artistURL = $("<a>").attr("href", response.url).append(artistName);
-  var artistImage = $("<img>").attr("src", response.thumb_url);
-  var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
-  var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
-  var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
-
-  // Empty the contents of the artist-div, append the new artist content
-  $("#jumbotron").empty();
-  $("#jumbotron").append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
-});
-
-
-
+        var bandDetails = $(`
+        <div class="jumbotron" style="width: 55rem;">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="${response.thumb_url}" width="200" height="200">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="display-4">${response.name}</h1>
+                    <p class="lead">${response.tracker_count} fans tracking this artist</p>
+                    <p class="lead">${response.upcoming_event_count} upcoming events</p>
+                </div>
+            </div>
+        </div>
+        `);
+        // Append the HTML Jumbotron
+        $("#jumbotron").append(bandDetails);
+    });
 }
