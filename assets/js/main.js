@@ -22,43 +22,43 @@ function clearHistory() {
 
 // Function to check if the user search return any value
 function checkSearch(userSearch) {
-  const settings = {
-    async: true,
-    crossDomain: true,
-    url:
-      "https://spotify23.p.rapidapi.com/search/?q=" +
-      userSearch +
-      "&type=multi&offset=0&limit=10&numberOfTopResults=5",
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": spotifyAPIKey,
-      "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
-    },
-  };
-
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-    // Check the response length
-    if (response.artists.totalCount === 0) {
-      // Display an alert for invalid user search
-      document.getElementById("ms-alert").style.visibility = "visible";
-    } else {
-      // Save into the local storage the user search
-      saveSearch(userSearch);
-
-      // Display into the search history the new user search
-      displaySearchHistory();
-
-      // Display Wikipedia data into HTML
-      // searchWikipedia(userSearch);
-
-      // Display Spotify data into HTML
-      searchSpotify(userSearch);
-      /*      };
-          });*/
-    }
-  });
-}
+    const settings = {
+      async: true,
+      crossDomain: true,
+      url:
+        "https://spotify23.p.rapidapi.com/search/?q=" +
+        userSearch +
+        "&type=multi&offset=0&limit=10&numberOfTopResults=5",
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": spotifyAPIKey,
+        "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
+      },
+    };
+  
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      // Check the response length
+      if (response.artists.totalCount === 0) {
+        // Display an alert for invalid user search
+        document.getElementById("ms-alert").style.visibility = "visible";
+      } else {
+        // Save into the local storage the user search
+        saveSearch(userSearch);
+  
+        // Display into the search history the new user search
+        displaySearchHistory();
+  
+        // Display Wikipedia data into HTML
+        // searchWikipedia(userSearch);
+  
+        // Display Spotify data into HTML
+        //  searchSpotify(userSearch);
+        /*      };
+            });*/
+      }
+    });
+  }
 
 // .on("click") function associated with the Search Button
 $("#search-button").on("click", function (event) {
