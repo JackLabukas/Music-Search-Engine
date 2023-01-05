@@ -1,31 +1,28 @@
 body {
   background-image: url('../image/pexels-isabella-mendes-13146411.jpg');
-   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
-.projectTasks {
-    align-self: center;
-    position: relative;
-    margin-top: 0px;
-    margin-top: 25px;
-    color: #5e5e5e !important;
-  }
-  .projectTasks .social {
-    text-align:left;
-  }
-  .projectTasks .social > a {
-    color: #5e5e5e !important;
-    font-size:20px;
-  }
-  .projectTasks .social > a:hover {
-    font-size: 25px;
-    transition: all 0.3s ease-in-out;
-  }
-  .copyright {
-    margin-top:15px;
-    text-align:center;
-    font-size:12px;
-    color:#b3b3b3 !important;
-    margin-bottom:15px;
-  }
+
+.social {
+  text-align: left;
+}
+
+.social>a {
+  color: #5e5e5e !important;
+  font-size: 20px;
+}
+
+.social>a:hover {
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff !important;
+  margin-bottom: 15px;
+}

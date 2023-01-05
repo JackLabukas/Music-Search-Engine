@@ -18,6 +18,9 @@ function clearHTML()
   // Function to empty out the team element
   $("#team").empty();
 
+  // Hde the invalid user search alert
+  document.getElementById("ms-alert").style.visibility = "hidden";
+
 }
 
 // function to hide the invalid user search alert
@@ -27,11 +30,14 @@ function alertClose() {
 
 // clear the local storage and the searches history
 function clearHistory() {
+
   // if is visible then hide the invalid user search alert
   alertClose();
+
   // clear the local storage
-  localStorage.clear();
+  localStorage.clear();  
   var historyEl = document.getElementById("history");
+  
   // clear the searches history
   historyEl.innerHTML = "";
   return;
