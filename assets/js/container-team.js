@@ -37,17 +37,17 @@ function displayTeam() {
         // Build the html card
         var teamCard = $(`
         <div class="col-sm-3">
-            <div class="card">
+            <div class="card bg-light">
                 <div class="card-body">
-                    <h5 class="card-title mark">${team[i].name}</h5>
-                    <div class="footer-basic">
+                    <div class="card-header"><h5>${team[i].name}</h5></div>
+                    <div class="projectTasks">
                         <div class="social">
                             <a href="${team[i].linkedin}" target="_blank"><i class="icon ion-social-linkedin"></i></a>
                             <a href="${team[i].github}" target="_blank"><i class="icon ion-social-github"></i></a>
                             <a href="${team[i].email}" target="_blank"><i class="icon ion-email"></i></a>
                         </div>
                     </div>
-                    <hr class="hr weather-hr" />
+                    <hr/>
                     <p class="h6 badge badge-dark">Project Tasks</p>                    
                     <p class="text-sm-left font-italic"><small class="text-muted">${team[i].tasks}</small></p>
                 </div>

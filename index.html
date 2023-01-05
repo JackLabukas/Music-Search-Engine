@@ -22,7 +22,7 @@
 
 <body>
   <!-- APP Title-->
-  <header class="container-fluid text-center text-white bg-dark p-2">
+  <header class="container-fluid text-center text-white p-2">
     <!-- Image and text -->
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Music Search Engine</a>
@@ -41,27 +41,27 @@
   </header>
 
   <!-- max-width for ultra wide resolutions -->
-  <div class="container-fluid" style="max-width: 1400px;" >
+  <div class="container-fluid" style="max-width: 1400px;">
     <div class="row">
 
-      <div class="col-lg-12 pb-3">
+      <div class="col-lg-12">
 
         <!-- Jumbotron to display the user search results (wikipedia key facts) -->
-        <section id="jumbotron" class="row mt-3" role="region" aria-live="polite">
+        <section id="jumbotron" class="row" role="region" aria-live="polite">
         </section>
 
         <!-- What's Trending Main Element (spotify results) -->
-        <section id="trendingMain" class="row mt-3" role="region" aria-live="polite">
+        <section id="trendingMain" class="row" role="region" aria-live="polite">
         </section>
 
         <!-- What's Trending Side Element (spotify results) -->
-        <section id="trendingSide" class="row mt-3" role="region" aria-live="polite">
+        <section id="trendingSide" class="row" role="region" aria-live="polite">
         </section>
 
         <!-- Meet the team Element-->
-        <section class="row mt-3" role="region" aria-live="polite">
-          <div  id="team" class="row justify-content-center" style="width: 80rem;">
-          </div> 
+        <section class="row" role="region" aria-live="polite">
+          <div id="team" class="row">
+          </div>
         </section>
 
       </div>
@@ -69,28 +69,27 @@
   </div>
 
   <!-- Footer / Contact element  -->
-  <footer class="container-fluid text-white bg-dark p-2 fixed-bottom">
-    <div class="footer-basic">
+  <footer class="container-fluid fixed-bottom">
       <div class="row">
+
         <!-- Search user's history -->
-        <div class="col col-lg-6">          
-          <span id="history"></span>          
-        </div>        
-        <div class="col col-lg-3">
+        <div class="col col-lg-6">
+          <span id="history"></span>
         </div>
+        <div class="col col-lg-3"></div>
+
         <!-- Meet the team -->
-        <div id="team" class="col col-lg-3 text-right" >
-          <button id="btTeam" type="button" class="btn btn-danger my-2">Meet the team</button>          
+        <div id="team" class="col col-lg-3 text-right">
+          <button id="btTeam" type="button" class="btn btn-danger my-2">Meet the team</button>
         </div>
       </div>
-    
-      <!-- Clear the search user's history -->    
+
+      <!-- Clear the search user's history -->
       <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
 
       <!-- technology -->
       <ion-icon name="pause-circle"></ion-icon>
       <p class="copyright text-center">Bootstrap 4</p>
-    </div>
   </footer>
 
   <!-- Moment.js -->
