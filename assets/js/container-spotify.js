@@ -8,7 +8,7 @@ function searchSpotify(artist) {
       "&type=multi&offset=0&limit=10&numberOfTopResults=5",
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "c1ec80a3b6msh5a59fdbd8715fddp1e8eb2jsn5706ec8ba70f",
+      "X-RapidAPI-Key": "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112",
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };
@@ -17,11 +17,12 @@ function searchSpotify(artist) {
     console.log(response.artists.items);
     response.artists.items.forEach(function (artist) {
       var artistBtn = $("<button>");
-      artistBtn.text(artist.data.profile.name);
+      artistBtn.text(artist.data.profile.name).addClass("btn btn-info");
       $("#jumbotron").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
         event.data = this.innerHTML;
+        console.log(event.data);
         callArtist(event.data);
       });
     });
@@ -29,7 +30,7 @@ function searchSpotify(artist) {
     function callArtist() {
       response.albums.items.forEach(function (album) {
         var artistBtn = $("<button>");
-        artistBtn.text(album.data.name).addClass("btn btn-info");
+        artistBtn.text(album.data.name).addClass("btn btn-success");
         $("#trendingMain").append(artistBtn);
       });
       response.tracks.items.forEach(function (track) {
