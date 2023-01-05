@@ -22,14 +22,14 @@ function searchSpotify(artist) {
       //   .css("background-color", "black");
       //top 10 albums
       var albumButton = $("<button>");
-      albumButton.text(album.data.name);
+      albumButton.text(album.data.name).addClass("btn albumBtn badge-pill");
       $("#trendingMain").append(albumButton);
     });
     //top 10 tracks
     response.tracks.items.forEach(function (track) {
       console.log(response.tracks.items);
       var trackButton = $("<button>");
-      trackButton.text(track.data.name);
+      trackButton.text(track.data.name).addClass("btn trackBtn badge-pill");
       $("#trendingSide").append(trackButton);
     });
   });
