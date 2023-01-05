@@ -19,8 +19,25 @@ function searchSpotify(artist) {
       var artistBtn = $("<button>");
       artistBtn.text(artist.data.profile.name);
       $("#jumbotron").append(artistBtn);
+      artistBtn.on("click", function (event) {
+        console.log(event);
+        event.data = this.innerHTML;
+        callArtist(event.data);
+      });
     });
 
+    function callArtist() {
+      response.albums.items.forEach(function (album) {
+        var artistBtn = $("<button>");
+        artistBtn.text(album.data.name).addClass("btn btn-info");
+        $("#trendingMain").append(artistBtn);
+      });
+      response.tracks.items.forEach(function (track) {
+        var trackBtn = $("<button>");
+        trackBtn.text(track.data.name).addClass("btn btn-warning");
+        $("#trendingSide").append(trackBtn);
+      });
+    }
     // response.albums.items.forEach(function (album) {
     //   //   $("div").text("hello");
     //   // $("#trendingMain")
