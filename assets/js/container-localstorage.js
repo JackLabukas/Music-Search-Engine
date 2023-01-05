@@ -9,7 +9,7 @@ function saveSearch(userSearch) {
     JSON.parse(localStorage.getItem("UserSearchMusic")) || [];
 
   // check if the local storage includes the user search and the number of saved searches
-  if (!storedSearches.includes(userSearch) && storedSearches.length < 10) {
+  if (!storedSearches.includes(userSearch) && storedSearches.length < 20) {
     storedSearches.push(userSearch);
     localStorage.setItem("UserSearchMusic", JSON.stringify(storedSearches));
   }
@@ -24,7 +24,7 @@ function displaySearchHistory() {
   for (i = 0; i < searchedHistory.length; i++) {
     var newBTN = document.createElement("button");
     newBTN.classList.add("btn", "btn-success", "my-2", "past-search");
-    newBTN.setAttribute("style", "padding: 20px");
+    newBTN.setAttribute("style", "margin-right: 5px");
     newBTN.setAttribute("id", "saved-search-bt");
     newBTN.textContent = `${searchedHistory[i]}`;
     historyEl.appendChild(newBTN);

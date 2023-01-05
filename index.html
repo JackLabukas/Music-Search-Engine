@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- CSS -->
-  <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -25,9 +25,7 @@
   <header class="container-fluid text-center text-white bg-dark p-2">
     <!-- Image and text -->
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="" width="30" height="30" class="d-inline-block align-top" alt=""> Music Search Engine
-      </a>
+      <a class="navbar-brand" href="#">Music Search Engine</a>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
@@ -43,10 +41,10 @@
   </header>
 
   <!-- max-width for ultra wide resolutions -->
-  <div class="container-fluid" style="max-width: 1400px">
+  <div class="container-fluid" style="max-width: 1400px;" >
     <div class="row">
 
-      <div class="col-lg-9 pb-3">
+      <div class="col-lg-12 pb-3">
 
         <!-- Jumbotron to display the user search results (wikipedia key facts) -->
         <section id="jumbotron" class="row mt-3" role="region" aria-live="polite">
@@ -61,7 +59,7 @@
         </section>
 
         <!-- Meet the team Element-->
-        <section id="team" class="row mt-3" role="region" aria-live="polite">
+        <section id="team"  class="row mt-3" role="region" aria-live="polite"> 
         </section>
 
       </div>
@@ -71,30 +69,25 @@
   <!-- Footer / Contact element  -->
   <footer class="container-fluid text-white bg-dark p-2">
     <div class="footer-basic">
-
       <div class="row">
-
         <!-- Search user's history -->
-        <div id="history" class="col">
+        <div class="col col-lg-6">          
+          <span id="history"></span>          
+        </div>        
+        <div class="col col-lg-3">
         </div>
-        
-        <div class="col-md-auto">
-        </div>
-
         <!-- Meet the team -->
-        <div id="team" class="col col-lg-2">
-          Meet the team
+        <div id="team" class="col col-lg-3 text-right" >
+          <button id="btTeam" type="button" class="btn btn-danger my-2">Meet the team</button>          
         </div>
       </div>
-    </div>
+    
+      <!-- Clear the search user's history -->    
+      <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
 
-    <!-- Clear the search user's history -->
-    <hr class="my-2 " style="background-color:rgba(255, 255, 255, 0.966)" />
-    <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
-
-    <!-- technology -->
-    <ion-icon name="pause-circle"></ion-icon>
-    <p class="copyright text-center">Bootstrap 4</p>
+      <!-- technology -->
+      <ion-icon name="pause-circle"></ion-icon>
+      <p class="copyright text-center">Bootstrap 4</p>
     </div>
   </footer>
 
