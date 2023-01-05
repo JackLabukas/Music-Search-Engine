@@ -11,20 +11,22 @@ function searchWikipedia(userSearch) {
         console.log(response);
 
         var bandDetails = $(`
-        <div class="jumbotron" style="width: 55rem;">
-            <div class="row">
-                <div class="col-lg-4">
+        <div class="card mb-3" style="width: 55rem;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
                     <img src="${response.thumb_url}" width="200" height="200">
                 </div>
-                <div class="col-lg-8">
-                    <h1 class="display-4">${response.name}</h1>
-                    <p class="lead">${response.tracker_count} fans tracking this artist</p>
-                    <p class="lead">${response.upcoming_event_count} upcoming events</p>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${response.name}</h5>
+                        <p class="card-text">${response.tracker_count} fans tracking this artist</p>
+                        <p class="card-text">${response.upcoming_event_count} upcoming events</p>
+                    </div>
                 </div>
             </div>
         </div>
         `);
         // Append the HTML Jumbotron
-        $("#jumbotron").append(bandDetails);
+        $("#artistCard").append(bandDetails);
     });
 }
