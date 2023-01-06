@@ -1,23 +1,12 @@
 # Music-Search-Engine
-Group 2  
-
-1 Page Presentation  
-
- 
 
 #Project Name:  
-
 Music Search Engine 
-
- 
  
 #Project Description:  
+User inputs a musician or band into search bar
+Using Spotify API list musicians image, top albums & top tracks
 
-User inputs a musician or band into search bar 
-
-Using  Wikipedia & YouTube/Spotify API’s 
-
-The application prints the artist’s Wikipedia page & then lists Spotify info  
 
 ALTs:  
 
@@ -144,7 +133,8 @@ Moved away from displaying top 10 tracks to top 10 artists
 Using top 10 artists we will create buttons able to utilise the bands in town event info   
 
    
-
+#Challenges
+• Redesigning page after facing challenges syncing APIs  
  
 
   
