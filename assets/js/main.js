@@ -5,8 +5,6 @@ const spotifyAPIKey = "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112";
 
 // Clear all HTML elements
 function clearHTML() {
-
-  
   // Function to empty out the artistCard element (bandsintown facts)
   $("#artistCard").empty();
 

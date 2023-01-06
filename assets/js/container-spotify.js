@@ -14,48 +14,44 @@ function searchSpotify(artist) {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response.artists.items);
+    // console.log(response.artists.items);
+    // artist button
     response.artists.items.forEach(function (artist) {
       var artistBtn = $("<button>");
-      artistBtn.text(artist.data.profile.name).addClass("btn btn-info");
+      artistBtn
+        .text(artist.data.profile.name)
+        .addClass("btn removeMe btn-info badge-pill");
       $("#jumbotron").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
         event.data = this.innerHTML;
-        console.log(event.data);
-        callArtist(event.data);
+        clearDisplay();
+        searchSpotify(event.data);
       });
     });
 
-    function callArtist() {
-      response.albums.items.forEach(function (album) {
-        var artistBtn = $("<button>");
-        artistBtn.text(album.data.name).addClass("btn btn-success");
-        $("#trendingMain").append(artistBtn);
-      });
-      response.tracks.items.forEach(function (track) {
-        var trackBtn = $("<button>");
-        trackBtn.text(track.data.name).addClass("btn btn-warning");
-        $("#trendingSide").append(trackBtn);
-      });
-    }
-    // response.albums.items.forEach(function (album) {
-    //   //   $("div").text("hello");
-    //   // $("#trendingMain")
-    //   //   .append(`<div>${album.data.name}</div>`)
-    //   //   .css("background-color", "black");
-    //   //top 10 albums
-    //   //   var albumButton = $("<button>");
-    //   //   albumButton.text(album.data.name).addClass("btn albumBtn badge-pill");
-    //   //   $("#trendingMain").append(albumButton);
-    //   // });
-    //   //top 10 tracks
-    //   // response.tracks.items.forEach(function (track) {
-    //   //   console.log(response.tracks.items);
-    //   //   var trackButton = $("<button>");
-    //   //   trackButton.text(track.data.name).addClass("btn btn-info badge-pill");
-    //   //   $("#trendingSide").append(trackButton);
-    //   // });
-    // });
+    // console.log(response);
+    //top albums
+    response.albums.items.forEach(function (album) {
+      // console.log(`this one ${album.data.name}`);
+      var albumBtn = $("<button>");
+      albumBtn
+        .text(album.data.name)
+        .addClass("btn removeMe btn-success badge-pill");
+      $("#trendingMain").append(albumBtn);
+    });
+    //top tracks
+    response.tracks.items.forEach(function (track) {
+      // console.log(response.tracks.items);
+      var trackBtn = $("<button>");
+      trackBtn
+        .text(track.data.name)
+        .addClass("btn removeMe btn-warning badge-pill");
+      $("#trendingSide").append(trackBtn);
+    });
   });
+}
+
+function clearDisplay() {
+  $(".removeMe").remove();
 }
