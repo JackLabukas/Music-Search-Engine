@@ -33,17 +33,19 @@ function searchSpotify(artist) {
         displaySearchHistory();
       });
     });
+    console.log(
+      response.artists.items[0].data.visuals.avatarImage.sources[0].url
+    );
     var bandDetails = $(`
         <div class="card mb-3" style="width: 55rem;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${response.thumb_url}" width="200" height="200">
+                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">${response.name}</h5>
-                        <p class="card-text">${response.tracker_count} fans tracking this artist</p>
-                        <p class="card-text">${response.upcoming_event_count} upcoming events</p>
+                        <h5 class="card-title">${response.artists.items[0].data.profile.name}</h5>
+                        
                     </div>
                 </div>
             </div>
