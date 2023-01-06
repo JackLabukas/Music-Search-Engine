@@ -29,4 +29,4 @@ function searchWikipedia(userSearch) {
         // Append the HTML Jumbotron
         $("#artistCard").append(bandDetails);
     });
-}
+};
