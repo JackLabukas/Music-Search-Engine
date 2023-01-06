@@ -25,11 +25,35 @@ function searchSpotify(artist) {
       artistBtn.on("click", function (event) {
         console.log(event);
         event.data = this.innerHTML;
-        clearDisplay();
+        // clearDisplay();
+        clearHTML();
         searchSpotify(event.data);
+        searchWikipedia(event.data);
+        saveSearch(event.data);
+        displaySearchHistory();
       });
     });
-
+    console.log(
+      response.artists.items[0].data.visuals.avatarImage.sources[0].url
+    );
+    var bandDetails = $(`
+        <div class="card mb-3" style="width: 55rem;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${response.artists.items[0].data.profile.name}</h5>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        `);
+    // Append the HTML Jumbotron
+    $("#artistCard").append(bandDetails);
+    //
     // console.log(response);
     //top albums
     response.albums.items.forEach(function (album) {
@@ -50,8 +74,4 @@ function searchSpotify(artist) {
       $("#trendingSide").append(trackBtn);
     });
   });
-}
-
-function clearDisplay() {
-  $(".removeMe").remove();
 }

@@ -74,7 +74,7 @@ function checkSearch(userSearch) {
       displaySearchHistory();
 
       // Display Wikipedia data into HTML
-      searchWikipedia(userSearch);
+      // searchWikipedia(userSearch);
 
       // Display Spotify data into HTML
       searchSpotify(userSearch);
