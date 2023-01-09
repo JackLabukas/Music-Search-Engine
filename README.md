@@ -6,158 +6,78 @@ As a team we are tasked with conceiving & executing a design that solves a real-
 By integrating data received from multiple server-side API requests. 
 Employing agile development methodologies to integrate 2 server side APIs. 
 Using Bootstrap techniques to curate an interactive & polished UI. 
-Establishing client-side storage to store persistent data.
+Establishing client-side storage to store & persistent data.
 
 #The Idea: 
-Front-end web application. 
-User inputs musician or band.  
+Front-end web application
+User inputs musician or band
+The APIs Returns: 
 
-    Spotify API returns: 
-    *Top 10 related artists
-    *Related image data
-    *Top 10 tracks 
-    *Top 10 albums
+    via Spotify: 
+    *Displays Top 10 Related Artists
+    *Prints Image Data
+    *Displays Top 10 Tracks 
+    *Display Top 10 Albums
 
-    2nd API returns: 
+    via 2nd API: 
     * 
     * 
     * 
 
     Local Storage Persists: 
-
-#The Challenges 
-
-#The Wireframe
-
-
-
-ALTs:  
-
-Or Links to web videos/URL  
-
-Or Events – Bands in Town on Github  
-
- 
+    *Search history 
 
 #User Story:  
- As A user 
+As A user; 
+I WANT a webpage application that searches the name of given music artist or band.  
+&, Displays selected artist’s information via Spotify & a second API. 
+To learn more about music. 
 
-I want a webpage application that searches the name of given artist  
+#The Challenges 
+* Agreeing the concept  
+* Identifying viable APIs with relevant functionality 
+* Integrating multiple APIs
+* Using agile development methodologies to work collaboratively
+* Connecting regularly as a team debug & improve design 
+* Collectively developing & improving functionality 
+* Deciding on Git workflow & agreed methodology for pull requests
+* Using Trello team technology - to collaborate efficiently & effectively
+* A movement away from Bands in Town API, due to restricted database & unaligned capabilities
 
-& Displays the artist’s YouTube/Spotify videos & Wikipedia page.  
-
-Save the last user search in local storage  
-
- 
-
-#Wireframing Example:  
-
-https://www.midomi.com/ 
-
- 
-
-#APIs:  
-
-YouTube/Spotify – Artist’s music videos displayed to page  
-
-- latest 3 albums  
-
-- top 10 tracks  
-
- 
-
-Wiki – Artist's Wiki printed to page  
-
- 
-
-#Breakdown of Tasks: 
-
+#Breakdown of Tasks/Team Contributions: 
 Rui:   
+To implement Bootstrap methods to curate page design 
+To combine APIs & Local Storage 
+To introduce HTML framework 
+Identify & integrate a second API
 
-*Bootstrap  
-
-*UI design 
-
-*Implementing code/refactoring  
-
-*Strengths: Combining APIs & local storage 
-
- 
 Kassy:  
+Presenting 
+Assisting with Spotify API 
+Generating ReadMe file 
+Project management 
+Copywriting
 
-*Presenting,  
-
-*Assisting with YouTube API,  
-
-*Generating ReadMe file,  
-
-*Overseeing project management tool & team organisation  
-
- 
-Jack :  
-
-*Implementing YouTube/Spotify functionality  
-
+Jack:  
+Implementing Spotify Functionality 
+Implementing dual API functionality
  
 Amal :  
-
-*Implementing Wiki functionality  
-
- 
+TBC
 
 #Considerations:  
-
-*Naming conventions  
-
-*Apis – Jack & Amal complete a call early on/upfront to ensure we can utlise both APIs o 
-
-*Wiki API- has a limit of 200 calls per key -  
-
- 
-
-#Further Considerations  
-
-*Page opens with background image  
-
-*Background images changes after inputting search – hopefully to image of the band or artist  
-
-*Top of page is artist’s Wiki 
-
-*Then print info from Spotify (TBC – possibly events) 
-
-*Possibly print event info from Bands in Town (search API)   
-
-*Save to local storage - user search history  
-
-*Navigate back to homepage/top with logo - Top left logo to navigate back to homepage 
-
-*1 HTML page 
-
+*Naming conventions - Team meeting to agree 
+*API call limitations - e.g. Wiki is 200 per day
+*Page opens with background image   
+*Saving user search history to local storage 
+*Navigate back to homepage/top with logo 
+*Agreed structure - 1 HTML page 
 *Footer to display user search history  
-
 *Homepage is going to be clean only holding background image & search bar  
+*Team/Who built this page? Links to team's Github pages & LinkedIn 
 
-*Team/Who built this page? Images/Avatar, Links to Github pages & LinkedIn 
-
- 
-
-#Project Management Tool  
-
+#Project Management Tool: 
 https://trello.com/b/zVBXZjZE/mse 
 
- 
-
-Group Meeting – 5/1/22 
-
-Changed direction from to Bands in Town due to complex nature of employing Wikipages  
-
-Moved away from displaying top 10 tracks to top 10 artists  
-
-Using top 10 artists we will create buttons able to utilise the bands in town event info   
-
-   
-#Challenges
-• Redesigning page after facing challenges syncing APIs  
- 
-
-  
+#The Wireframe
+#Wireframing Example:  https://www.midomi.com/ 
