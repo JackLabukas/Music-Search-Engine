@@ -1,11 +1,34 @@
 # Music-Search-Engine
-
-#Project Name:  
-Music Search Engine 
  
-#Project Description:  
-User inputs a musician or band into search bar
-Using Spotify API list musicians image, top albums & top tracks
+#The Requirements & Task Overview:  
+To work collaboratively, as a project group to build a front-end web application. 
+As a team we are tasked with conceiving & executing a design that solves a real-world problem. 
+By integrating data received from multiple server-side API requests. 
+Employing agile development methodologies to integrate 2 server side APIs. 
+Using Bootstrap techniques to curate an interactive & polished UI. 
+Establishing client-side storage to store persistent data.
+
+#The Idea: 
+Front-end web application. 
+User inputs musician or band.  
+
+    Spotify API returns: 
+    *Top 10 related artists
+    *Related image data
+    *Top 10 tracks 
+    *Top 10 albums
+
+    2nd API returns: 
+    * 
+    * 
+    * 
+
+    Local Storage Persists: 
+
+#The Challenges 
+
+#The Wireframe
+
 
 
 ALTs:  
