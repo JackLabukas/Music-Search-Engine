@@ -7,28 +7,27 @@ function displayTeam() {
                 linkedin: '#',
                 github: '#',
                 email: 'amula9986.ah@gmail.com',
-                tasks: 'Implementing Wikipedia Functionality'
+                tasks: 'TBC'
             },
             {
                 name: 'Jack Labukas',
-                linkedin: '#',
-                github: '#',
+                linkedin: 'https://www.linkedin.com/in/jack-labukas-5bb038b7/',
+                github: 'https://github.com/JackLabukas',
                 email: 'labukasgediminas@gmail.com',
-                tasks: 'Implementing Spotify Functionality'
+                tasks: 'Implementing Spotify Functionality * Implementing dual API functionality '
             },
             {
-                name: 'Kassi',
-                linkedin: '#',
-                github: '#',
-                email: 'kassy.g.e@hotmail.com',
-                tasks: 'Presenting • Assisting with YouTube API • Generating ReadMe file • Poject management • Team organisation'
+                name: 'Kassy Essiet',
+                linkedin: 'https://www.linkedin.com/in/kassy-essiet-labukas-581a34122/',
+                github: 'https://github.com/KE-L',
+                tasks: '* Presenting * Assisting with Spotify API * Generating ReadMe file * Project management * Copywriting '
             },
             {
                 name: 'Rui Belo',
                 linkedin: 'https://linkedin.com/in/ruibelo',
                 github: 'https://github.com/CZ-RBelo/',
                 email: 'jr.belo@hotmail.com',
-                tasks: 'Bootstrap • UI Design • Implementing Code/ Refactoring • Combining APIs & Local Storage'
+                tasks: '*To implement Bootstrap methods to curate page design * To combine APIs & Local Storage * To introduce HTML framework *Identify & integrate a second API'
             }
         ]   
 
