@@ -1,4 +1,5 @@
 function searchSpotify(artist) {
+  var number = 0;
   const settings = {
     async: true,
     crossDomain: true,
@@ -8,7 +9,7 @@ function searchSpotify(artist) {
       "&type=multi&offset=0&limit=10&numberOfTopResults=5",
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112",
+      "X-RapidAPI-Key": "c386f09e27msh21a501540acd1fdp1525abjsn9d7486b3d856",
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };
@@ -17,10 +18,10 @@ function searchSpotify(artist) {
     // console.log(response.artists.items);
     // artist button
     response.artists.items.forEach(function (artist) {
-      var artistBtn = $("<button>");
+      var artistBtn = $(`<button>`);
       artistBtn
         .text(artist.data.profile.name)
-        .addClass("btn removeMe btn-info badge-pill");
+        .addClass("btn m-2 removeMe btn-info badge-pill");
       $("#jumbotron").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
@@ -59,20 +60,27 @@ function searchSpotify(artist) {
     // console.log(response);
     //top albums
     response.albums.items.forEach(function (album) {
+      number++;
+      console.log(number);
       // console.log(`this one ${album.data.name}`);
-      var albumBtn = $("<button>");
-      albumBtn
-        .text(album.data.name)
-        .addClass("btn removeMe btn-success badge-pill");
+      var albumBtn = $(`<div class="card" style="width: 18rem;">
+  <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">${album.data.name}</p>
+  </div>
+</div>`);
+      // albumBtn
+      //   .text(album.data.name)
+      //   .addClass("removeMe m-2 bg-primary badge-pill");
       $("#trendingMain").append(albumBtn);
     });
     //top tracks
     response.tracks.items.forEach(function (track) {
       // console.log(response.tracks.items);
-      var trackBtn = $("<button>");
+      var trackBtn = $("<div>");
       trackBtn
         .text(track.data.name)
-        .addClass("btn removeMe btn-warning badge-pill");
+        .addClass("removeMe m-2 bg-success badge-pill");
       $("#trendingSide").append(trackBtn);
     });
   });
