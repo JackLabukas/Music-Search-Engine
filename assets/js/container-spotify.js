@@ -29,7 +29,7 @@ function searchSpotify(artist) {
         // clearDisplay();
         clearHTML();
         searchSpotify(event.data);
-        searchWikipedia(event.data);
+
         saveSearch(event.data);
         displaySearchHistory();
       });
@@ -58,7 +58,8 @@ function searchSpotify(artist) {
     // console.log(response);
     //top albums
 
-    response.albums.items.forEach(function (album, number = 0) {
+    var number = 0 - 1;
+    response.albums.items.forEach(function (album) {
       number++;
       console.log(number);
       // console.log(`this one ${album.data.name}`);
