@@ -1,10 +1,8 @@
 // Spotify & Wikipedia API Keys
 
-const wikipediaAPIKey = "";
 const spotifyAPIKey = "c386f09e27msh21a501540acd1fdp1525abjsn9d7486b3d856";
 const bingAPIKey = "3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06";
-//"3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06"
-const spotifyAPIKey = "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112";
+
 
 // Clear all HTML elements
 function clearHTML() {
@@ -77,7 +75,7 @@ function checkSearch(userSearch) {
       displaySearchHistory();
 
       // Display Wikipedia data into HTML
-      searchWikipedia(userSearch);
+      searchBing(userSearch);
 
       // Display Spotify data into HTML
       searchSpotify(userSearch);
