@@ -1,6 +1,7 @@
 // Spotify & Wikipedia API Keys
 
-const wikipediaAPIKey = "";
+const bingAPIKey = "3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06";
+//"3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06"
 const spotifyAPIKey = "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112";
 
 // Clear all HTML elements
@@ -74,7 +75,7 @@ function checkSearch(userSearch) {
       displaySearchHistory();
 
       // Display Wikipedia data into HTML
-      // searchWikipedia(userSearch);
+      searchWikipedia(userSearch);
 
       // Display Spotify data into HTML
       searchSpotify(userSearch);
@@ -92,7 +93,7 @@ $("#search-button").on("click", function (event) {
   $("#search-input").val("");
 
   if (userSearch != "") {
-    // Get data from the user search
+    // Get data from the user search    
     checkSearch(userSearch);
   } else {
     // Display an alert for invalid search

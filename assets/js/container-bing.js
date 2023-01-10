@@ -1,14 +1,22 @@
-// function searchWikipedia(userSearch) {
-//     console.log(userSearch);
+function searchWikipedia(userSearch) {
 
-//     // Querying the bandsintown api for the selected artist
-//     var queryURL = "https://rest.bandsintown.com/artists/" + userSearch + "?app_id=codingbootcamp";
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function (response) {
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://bing-image-search1.p.rapidapi.com/images/search?q=" + userSearch + "&count=10",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": bingAPIKey,
+		"X-RapidAPI-Host": "bing-image-search1.p.rapidapi.com"
+	}
+};
 
-//         console.log(response);
+$.ajax(settings).done(function (response) {
+	console.log(response.value[0].contentUrl);
+    document.body.style.backgroundImage = "url('https://cdn.images.dailystar.co.uk/dynamic/117/photos/911000/Paul-Hollywood-Bake-Off-last-episode-Channel-4-753911.jpg')";
+        //$("#htmlbody").append(teamCard);
+
+});
 
 //         var bandDetails = $(`
 //         <div class="card mb-3" style="width: 55rem;">
@@ -29,4 +37,4 @@
 //         // Append the HTML Jumbotron
 //         $("#artistCard").append(bandDetails);
 //     });
-// }
+};
