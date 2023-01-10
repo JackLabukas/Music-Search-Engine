@@ -1,5 +1,5 @@
 function searchSpotify(artist) {
-  var number = 0;
+  // console.log(number);
   const settings = {
     async: true,
     crossDomain: true,
@@ -34,9 +34,7 @@ function searchSpotify(artist) {
         displaySearchHistory();
       });
     });
-    console.log(
-      response.artists.items[0].data.visuals.avatarImage.sources[0].url
-    );
+
     var bandDetails = $(`
         <div class="card mb-3" style="width: 55rem;">
             <div class="row no-gutters">
@@ -45,7 +43,7 @@ function searchSpotify(artist) {
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                    <h6>Name of Artist/s: </h6>
+                    <h6>Name of Artists: </h6>
                         <h5 class="card-title">${response.artists.items[0].data.profile.name}</h5>
                         <h6>Top Spotify Playlist</h6>
                         <h5>${response.playlists.items[0].data.name}</h5>
@@ -59,7 +57,8 @@ function searchSpotify(artist) {
     //
     // console.log(response);
     //top albums
-    response.albums.items.forEach(function (album) {
+
+    response.albums.items.forEach(function (album, number = 0) {
       number++;
       console.log(number);
       // console.log(`this one ${album.data.name}`);
