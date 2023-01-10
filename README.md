@@ -78,6 +78,10 @@ TBC
 
 #Project Management Tool: 
 https://trello.com/b/zVBXZjZE/mse 
+screenshoot 
+
+#Communication Tool 
+Slack group screenshot
 
 #The Wireframe
 #Wireframing Example:  https://www.midomi.com/ 
