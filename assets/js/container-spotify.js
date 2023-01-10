@@ -29,7 +29,7 @@ function searchSpotify(artist) {
         // clearDisplay();
         clearHTML();
         searchSpotify(event.data);
-
+        searchBing(event.data);
         saveSearch(event.data);
         displaySearchHistory();
       });
