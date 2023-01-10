@@ -66,7 +66,8 @@ function searchSpotify(artist) {
       var albumBtn = $(`<div class="card" style="width: 18rem;">
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">${album.data.name}</p>
+  
+    <p class="card-text"><h6>${album.data.name}</h6></p>
   </div>
 </div>`);
       // albumBtn
@@ -75,12 +76,19 @@ function searchSpotify(artist) {
       $("#trendingMain").append(albumBtn);
     });
     //top tracks
+    var numberTwo = 0 - 1;
     response.tracks.items.forEach(function (track) {
+      numberTwo++;
       // console.log(response.tracks.items);
-      var trackBtn = $("<div>");
-      trackBtn
-        .text(track.data.name)
-        .addClass("removeMe m-2 bg-success badge-pill");
+      var trackBtn = $(`<div class="card" style="width: 18rem;">
+  <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>`);
+      // trackBtn
+      //   .text(track.data.name)
+      //   .addClass("removeMe m-2 bg-success badge-pill");
       $("#trendingSide").append(trackBtn);
     });
   });
