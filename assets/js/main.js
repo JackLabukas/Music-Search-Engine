@@ -1,7 +1,7 @@
 // Spotify & Wikipedia API Keys
 
 const wikipediaAPIKey = "";
-const spotifyAPIKey = "15d799340fmsh4511f77c045618dp1abc52jsn422d40512112";
+const spotifyAPIKey = "c386f09e27msh21a501540acd1fdp1525abjsn9d7486b3d856";
 
 // Clear all HTML elements
 function clearHTML() {
