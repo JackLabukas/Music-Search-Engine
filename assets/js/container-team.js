@@ -27,7 +27,7 @@ function displayTeam() {
                 linkedin: 'https://linkedin.com/in/ruibelo',
                 github: 'https://github.com/CZ-RBelo/',
                 email: 'jr.belo@hotmail.com',
-                tasks: '*To implement Bootstrap methods to curate page design * To combine APIs & Local Storage * To introduce HTML framework *Identify & integrate a second API'
+                tasks: 'Implementing Bootstrap methods * Combining APIs and Local Storage * Introducing the HTML structure * Identifying and integrating a second API * To combine APIs & Local Storage * To introduce HTML framework * Identify & integrate a second API'
             }
         ]   
 
