@@ -63,7 +63,7 @@ function searchSpotify(artist) {
       number++;
       console.log(number);
       // console.log(`this one ${album.data.name}`);
-      var albumBtn = $(`<div class="card m-2" style="width: 18rem;">
+      var albumBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
   
@@ -80,7 +80,7 @@ function searchSpotify(artist) {
     response.tracks.items.forEach(function (track) {
       numberTwo++;
       // console.log(response.tracks.items);
-      var trackBtn = $(`<div class="card m-2" style="width: 18rem;">
+      var trackBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
