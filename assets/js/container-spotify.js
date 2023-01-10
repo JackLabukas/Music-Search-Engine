@@ -9,7 +9,7 @@ function searchSpotify(artist) {
       "&type=multi&offset=0&limit=10&numberOfTopResults=5",
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "c386f09e27msh21a501540acd1fdp1525abjsn9d7486b3d856",
+      "X-RapidAPI-Key": spotifyAPIKey,
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };
