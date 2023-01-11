@@ -1,15 +1,22 @@
 # Music-Search-Engine
  
 The Requirements & Task Overview:  
+
 To work collaboratively, as a project group to build a front-end web application. 
+
 As a team we are tasked with conceiving & executing a design that solves a real-world problem. 
+
 By integrating data received from multiple server-side API requests. 
 Employing agile development methodologies to integrate 2 server side APIs. 
+
 Using Bootstrap techniques to curate an interactive & polished UI. 
+
 Establishing client-side storage to store & persistent data.
 
 The Idea: 
+
 Front-end web application
+
 User inputs musician or band
 The MS Bing API updates the background with an image of the band 
 Related artists results, generate buttons & when clicked navigates to the respective musician's page.  
