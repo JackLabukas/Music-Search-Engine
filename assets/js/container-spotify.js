@@ -9,7 +9,7 @@ function searchSpotify(artist) {
     url:
       "https://spotify23.p.rapidapi.com/search/?q=" +
       artist +
-      "&type=multi&offset=0&limit=10&numberOfTopResults=5",
+      "&type=multi&offset=0&limit=8&numberOfTopResults=5",
     method: "GET",
     headers: {
       "X-RapidAPI-Key": spotifyAPIKey,
@@ -18,7 +18,8 @@ function searchSpotify(artist) {
   };
 
   $.ajax(settings).done(function (response) {
-    // console.log(response.artists.items);
+    var number = 0 - 1;
+    var numberTwo = 0 - 1;
     // artist button
     response.artists.items.forEach(function (artist) {
       var artistBtn = $(`<button>`);
@@ -42,10 +43,10 @@ function searchSpotify(artist) {
     artistName = response.artists.items[0].data.profile.name;
 
     var bandDetails = $(`
-        <div class="card mb-3" style="width: 55rem;">
+        <div class="card mb-3 " style="width: 55rem;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200">
+                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200" >
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -67,28 +68,21 @@ function searchSpotify(artist) {
     $("#artistCard").append(bandDetails);
     //
     // console.log(response);
-
     //top albums
 
-    var albumSecTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top ` + artistName + ` albums</h6></div>`);
-    $("#albumsTitle").append(albumSecTitle);
-
-    var number = 0 - 1;
+    // TOP ALBUMS
     response.albums.items.forEach(function (album) {
       number++;
-      console.log(number);
-      // console.log(`this one ${album.data.name}`);
-      var albumBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
+
+      var albumCard =
+        $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
-  <div class="card-body">
+  <div class="card-body d-flex justify-content-center">
   
     <p class="card-text"><h6>${album.data.name}</h6></p>
   </div>
 </div>`);
-      // albumBtn
-      //   .text(album.data.name)
-      //   .addClass("removeMe m-2 bg-primary badge-pill");
-      $("#trendingMain").append(albumBtn);
+      $("#trendingMain").append(albumCard);
     });
 
     //top tracks
@@ -99,17 +93,15 @@ function searchSpotify(artist) {
     var numberTwo = 0 - 1;
     response.tracks.items.forEach(function (track) {
       numberTwo++;
-      // console.log(response.tracks.items);
-      var trackBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
+
+      var trackCard =
+        $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card-body d-flex justify-content-center">
+    <p class="card-text"><h6>${response.tracks.items[numberTwo].data.name}</h6></p>
   </div>
 </div>`);
-      // trackBtn
-      //   .text(track.data.name)
-      //   .addClass("removeMe m-2 bg-success badge-pill");
-      $("#trendingSide").append(trackBtn);
+      $("#trendingSide").append(trackCard);
     });
   });
 }
