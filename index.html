@@ -82,29 +82,27 @@
 
   </div>
 
-  <!-- Footer / Contact element  -->
+  <!-- Footer element  -->
   <footer class="container-fluid">
 
-    <!-- Search user's history title -->
-    <div class="alert alert-secondary" role="alert" style="width: 15rem;">
-      <h6>History</h6>
-    </div>
-    <div class="row">
+    <div class="container text-center">
+
+      <!-- Search user's history title -->
+      <div class="row justify-content-center">
+        <div class="alert text-white bg-dark" role="alert" style="width: 25rem;">
+          <h4>HISTORY</h4>
+        </div>
+      </div>
 
       <!-- Search user's history buttons-->
-      <div class="col col-lg-4">
-        <span id="history"></span>
-      </div>
+      <div><span id="history"></span></div>
+
+      <!-- Clear the search user's history -->
+      <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">Clear history</button>
+
+      <!-- technology -->
+      <p class="copyright text-center">Bootstrap 4</p>
     </div>
-
-    <!-- Clear the search user's history -->
-    <button type="submit" class="btn btn-outline-success" onclick="clearHistory()">
-      Clear history
-    </button>
-
-    <!-- technology -->
-    <ion-icon name="pause-circle"></ion-icon>
-    <p class="copyright text-center">Bootstrap 4</p>
   </footer>
 
   <!-- Moment.js -->
