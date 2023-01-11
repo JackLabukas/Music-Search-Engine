@@ -6,7 +6,7 @@ function searchSpotify(artist) {
     url:
       "https://spotify23.p.rapidapi.com/search/?q=" +
       artist +
-      "&type=multi&offset=0&limit=10&numberOfTopResults=5",
+      "&type=multi&offset=0&limit=8&numberOfTopResults=5",
     method: "GET",
     headers: {
       "X-RapidAPI-Key": spotifyAPIKey,
@@ -36,10 +36,10 @@ function searchSpotify(artist) {
     });
 
     var bandDetails = $(`
-        <div class="card mb-3" style="width: 55rem;">
+        <div class="card mb-3 " style="width: 55rem;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200">
+                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200" >
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
