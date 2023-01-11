@@ -25,7 +25,7 @@ function searchSpotify(artist) {
       artistBtn
         .text(artist.data.profile.name)
         .addClass("btn m-2 removeMe btn-success badge-pill");
-      $("#bandsRelatedTitle").append(artistBtn);
+      $("#bandsRelated").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
         event.data = this.innerHTML;
