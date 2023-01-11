@@ -1,6 +1,6 @@
 // Spotify & Wikipedia API Keys
 
-const spotifyAPIKey = "c386f09e27msh21a501540acd1fdp1525abjsn9d7486b3d856";
+const spotifyAPIKey = "d553593baemsh1e4a30be39fe1ebp1cca13jsn9335e7d2e755";
 const bingAPIKey = "3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06";
 
 // Clear all HTML elements
