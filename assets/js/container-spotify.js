@@ -61,9 +61,9 @@ function searchSpotify(artist) {
 
     // Append the HTML Bands Related Title
     var bandsRelatedTitle = $(
-      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Bands related to ` +
+      `<div class="text-light h1 bg-dark badge-pill">Bands related to ` +
         artistName +
-        `</h6></div>`
+        `</div>`
     );
     $("#bandsRelatedTitle").append(bandsRelatedTitle);
 
@@ -75,9 +75,7 @@ function searchSpotify(artist) {
 
     // Append the HTML Band Albums Title -->
     var albumsTitle = $(
-      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top albuns ` +
-        artistName +
-        `</h6></div>`
+      `<h1 class="display-1 text-light">Top albums ` + artistName + `</h1>`
     );
     $("#albumsTitle").append(albumsTitle);
 
@@ -94,14 +92,15 @@ function searchSpotify(artist) {
   </div>
 </div>`);
       $("#trendingMain").append(albumCard);
+      albumCard.on("click", function (event) {
+        console.log(event);
+      });
     });
 
     //top tracks
 
     var tracksSecTitle = $(
-      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top ` +
-        artistName +
-        ` tracks</h6></div>`
+      `<h1 class="display-1 text-light">Top ` + artistName + ` tracks</h1>`
     );
     $("#tracksTitle").append(tracksSecTitle);
 
