@@ -65,7 +65,7 @@ function searchSpotify(artist) {
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
   
-    <p class="card-text"><h6>${album.data.name}</h6></p>
+    <p class="card-text text-center"><h6>${album.data.name}</h6></p>
   </div>
 </div>`);
       $("#trendingMain").append(albumCard);

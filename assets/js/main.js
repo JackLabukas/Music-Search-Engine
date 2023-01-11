@@ -49,7 +49,7 @@ function checkSearch(userSearch) {
     url:
       "https://spotify23.p.rapidapi.com/search/?q=" +
       userSearch +
-      "&type=multi&offset=0&limit=10&numberOfTopResults=1",
+      "&type=multi&offset=0&limit=8&numberOfTopResults=5",
     method: "GET",
     headers: {
       "X-RapidAPI-Key": spotifyAPIKey,
@@ -60,7 +60,7 @@ function checkSearch(userSearch) {
   $.ajax(settings).done(function (response) {
     console.log(response);
     // Check the response length
-    if (response.artists.totalCount === 0) {
+    if (!response.artists) {
       // Display an alert for invalid user search
       document.getElementById("ms-alert").style.visibility = "visible";
     } else {
