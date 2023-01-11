@@ -14,20 +14,20 @@ function displayTeam() {
                 linkedin: 'https://www.linkedin.com/in/jack-labukas-5bb038b7/',
                 github: 'https://github.com/JackLabukas',
                 email: 'labukasgediminas@gmail.com',
-                tasks: 'Implementing Spotify Functionality * Implementing dual API functionality '
+                tasks: 'Implementing Spotify Functionality \n Implementing dual API functionality '
             },
             {
                 name: 'Kassy Essiet',
                 linkedin: 'https://www.linkedin.com/in/kassy-essiet-labukas-581a34122/',
                 github: 'https://github.com/KE-L',
-                tasks: '* Presenting * Assisting with Spotify API * Generating ReadMe file * Project management * Copywriting '
+                tasks: 'Presenting\nAssisting with Spotify API\nGenerating Documentation ie ReadMe\nCoordinate Project management tool'
             },
             {
                 name: 'Rui Belo',
                 linkedin: 'https://linkedin.com/in/ruibelo',
                 github: 'https://github.com/CZ-RBelo/',
                 email: 'jr.belo@hotmail.com',
-                tasks: 'Implementing Bootstrap methods * Combining APIs and Local Storage * Introducing the HTML structure * Implementing MS Bing Search API '
+                tasks: 'Implementing Bootstrap methods\nCombining APIs and Local Storage\nIntroducing the HTML structure\nImplementing MS Bing Search API '
             }
         ]   
 
