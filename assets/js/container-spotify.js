@@ -22,7 +22,7 @@ function searchSpotify(artist) {
       var artistBtn = $(`<button>`);
       artistBtn
         .text(artist.data.profile.name)
-        .addClass("btn m-2 removeMe btn-info badge-pill");
+        .addClass("btn m-2 removeMe btn-success badge-pill");
       $("#jumbotron").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
@@ -37,7 +37,7 @@ function searchSpotify(artist) {
     });
     // Top card/jumbotron
     var bandDetails = $(`
-        <div class="card mb-3 " style="width: 55rem;">
+        <div class="card mb-3 rounded" style="width: 55rem;">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200" >
