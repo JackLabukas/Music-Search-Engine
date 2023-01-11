@@ -1,4 +1,6 @@
 function searchSpotify(artist) {
+  var artistName;
+
   // console.log(number);
   const settings = {
     async: true,
@@ -22,7 +24,7 @@ function searchSpotify(artist) {
       var artistBtn = $(`<button>`);
       artistBtn
         .text(artist.data.profile.name)
-        .addClass("btn m-2 removeMe btn-success badge-pill");
+        .addClass("btn m-2 removeMe btn-info badge-pill");
       $("#jumbotron").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
@@ -35,7 +37,10 @@ function searchSpotify(artist) {
         displaySearchHistory();
       });
     });
-    // Top card/jumbotron
+
+    // Artist name to build the title
+    artistName = response.artists.items[0].data.profile.name;
+
     var bandDetails = $(`
         <div class="card mb-3 rounded" style="width: 55rem;">
             <div class="row no-gutters">
@@ -53,8 +58,28 @@ function searchSpotify(artist) {
             </div>
         </div>
         `);
-    // Append the HTML Jumbotron
+
+    // Append the HTML Bands Related Title
+    var bandsRelatedTitle = $(
+      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Bands related to ` +
+        artistName +
+        `</h6></div>`
+    );
+    $("#bandsRelatedTitle").append(bandsRelatedTitle);
+
+    // Append the HTML Bands Related HTML
     $("#artistCard").append(bandDetails);
+    //
+    // console.log(response);
+    //top albums
+
+    // Append the HTML Band Albums Title -->
+    var albumsTitle = $(
+      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top albuns ` +
+        artistName +
+        `</h6></div>`
+    );
+    $("#albumsTitle").append(albumsTitle);
 
     // TOP ALBUMS
     response.albums.items.forEach(function (album) {
@@ -71,8 +96,16 @@ function searchSpotify(artist) {
       $("#trendingMain").append(albumCard);
     });
 
-    // TOP TRACKS
+    //top tracks
 
+    var tracksSecTitle = $(
+      `<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top ` +
+        artistName +
+        ` tracks</h6></div>`
+    );
+    $("#tracksTitle").append(tracksSecTitle);
+
+    var numberTwo = 0 - 1;
     response.tracks.items.forEach(function (track) {
       numberTwo++;
 
