@@ -63,9 +63,9 @@ function searchSpotify(artist) {
       var albumCard =
         $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
-  <div class="card-body">
+  <div class="card-body d-flex justify-content-center">
   
-    <p class="card-text text-center"><h6>${album.data.name}</h6></p>
+    <p class="card-text"><h6>${album.data.name}</h6></p>
   </div>
 </div>`);
       $("#trendingMain").append(albumCard);
@@ -79,8 +79,8 @@ function searchSpotify(artist) {
       var trackCard =
         $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">${response.tracks.items[numberTwo].data.name}</p>
+  <div class="card-body d-flex justify-content-center">
+    <p class="card-text"><h6>${response.tracks.items[numberTwo].data.name}</h6></p>
   </div>
 </div>`);
       $("#trendingSide").append(trackCard);
