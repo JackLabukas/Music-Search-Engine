@@ -42,17 +42,17 @@ function searchSpotify(artist) {
     artistName = response.artists.items[0].data.profile.name;
 
     var bandDetails = $(`
-        <div class="card mb-3 rounded" style="width: 55rem;">
+        <div class="card bg-dark mb-3 badge badge-pill" style="width: 55rem;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200" >
+                    <img class=" badge-pill" src="${response.artists.items[0].data.visuals.avatarImage.sources[0].url}" width="200" height="200" >
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                    <h6> Name of the Artist</h6>
-                        <h5 class="card-title">${response.artists.items[0].data.profile.name}</h5>
-                        <h6>Top Spotify Playlist</h6>
-                        <h5>${response.playlists.items[0].data.name}</h5>
+                    <h6 class="text-light"> Name of the Artist</h6>
+                        <h5 class="card-title text-light">${response.artists.items[0].data.profile.name}</h5>
+                        <h6 class="text-light">Top Spotify Playlist</h6>
+                        <h5 class="text-light">${response.playlists.items[0].data.name}</h5>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@ function searchSpotify(artist) {
 
     // Append the HTML Bands Related Title
     var bandsRelatedTitle = $(
-      `<div class="text-light h1 bg-dark badge-pill">Bands related to ` +
+      `<div class="text-light h1 bg-dark badge-pill">Artists related to ` +
         artistName +
         `</div>`
     );
@@ -75,7 +75,9 @@ function searchSpotify(artist) {
 
     // Append the HTML Band Albums Title -->
     var albumsTitle = $(
-      `<h1 class="display-1 text-light">Top albums ` + artistName + `</h1>`
+      `<h1 class="display-1 text-light bg-dark badge-pill">Top albums ` +
+        artistName +
+        `</h1>`
     );
     $("#albumsTitle").append(albumsTitle);
 
@@ -100,7 +102,9 @@ function searchSpotify(artist) {
     //top tracks
 
     var tracksSecTitle = $(
-      `<h1 class="display-1 text-light">Top ` + artistName + ` tracks</h1>`
+      `<h1 class="display-1 text-light bg-dark badge-pill">Top ` +
+        artistName +
+        ` tracks</h1>`
     );
     $("#tracksTitle").append(tracksSecTitle);
 
