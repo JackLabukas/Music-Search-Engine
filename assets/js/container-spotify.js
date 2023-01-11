@@ -49,7 +49,7 @@ function searchSpotify(artist) {
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                    <h6>Name of Artists: </h6>
+                    <h6> Name of the Artist</h6>
                         <h5 class="card-title">${response.artists.items[0].data.profile.name}</h5>
                         <h6>Top Spotify Playlist</h6>
                         <h5>${response.playlists.items[0].data.name}</h5>
