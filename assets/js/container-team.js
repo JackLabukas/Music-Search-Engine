@@ -14,7 +14,7 @@ function displayTeam() {
                 linkedin: 'https://www.linkedin.com/in/jack-labukas-5bb038b7/',
                 github: 'https://github.com/JackLabukas',
                 email: 'labukasgediminas@gmail.com',
-                tasks: 'Implementing Spotify Functionality * Implementing dual API functionality '
+                tasks: 'Implementing Spotify Functionality \n* Implementing dual API functionality '
             },
             {
                 name: 'Kassy Essiet',
