@@ -83,7 +83,7 @@ function searchSpotify(artist) {
       var trackBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">${response.tracks.items[numberTwo].data.name}</p>
   </div>
 </div>`);
       // trackBtn
