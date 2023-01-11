@@ -60,7 +60,7 @@ function searchSpotify(artist) {
         </div>
         `);
 
-    // Append the HTML Bands Related Title HTML
+    // Append the HTML Bands Related Title
     var bandsRelatedTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Bands related to ` + artistName + `</h6></div>`);
     $("#bandsRelatedTitle").append(bandsRelatedTitle);
 
@@ -69,6 +69,10 @@ function searchSpotify(artist) {
     //
     // console.log(response);
     //top albums
+
+    // Append the HTML Band Albums Title -->
+    var albumsTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top albuns ` + artistName + `</h6></div>`);
+    $("#albumsTitle").append(albumsTitle);
 
     // TOP ALBUMS
     response.albums.items.forEach(function (album) {
