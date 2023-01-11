@@ -11,7 +11,9 @@ Establishing client-side storage to store & persistent data.
 The Idea: 
 Front-end web application
 User inputs musician or band
-The APIs Returns - 
+The MS Bing API updates the background with an image of the band 
+Related artists results, generate buttons & when clicked navigates to the respective musician's page.  
+Local storage saves & displays the user's search history 
 
 via Spotify API: 
     Displays Top 10 Related Artists
@@ -27,10 +29,10 @@ Local Storage Persists:
     User's search history 
 
 User Story:  
-As A user; \n
-I WANT a webpage application that searches the name of given music artist or band.  \n
-&, Displays selected artist’s information via Spotify & a second API. \n
-To learn more about music. \n
+As A user
+I WANT a webpage application that searches the name of given music artist or band. 
+&, Displays selected artist’s information via Spotify & a second API. 
+To learn more about music.
 
 The Challenges 
 Agreeing the concept  
