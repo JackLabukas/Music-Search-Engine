@@ -15,7 +15,8 @@ function searchSpotify(artist) {
   };
 
   $.ajax(settings).done(function (response) {
-    // console.log(response.artists.items);
+    var number = 0 - 1;
+    var numberTwo = 0 - 1;
     // artist button
     response.artists.items.forEach(function (artist) {
       var artistBtn = $(`<button>`);
@@ -34,7 +35,7 @@ function searchSpotify(artist) {
         displaySearchHistory();
       });
     });
-
+    // Top card/jumbotron
     var bandDetails = $(`
         <div class="card mb-3 " style="width: 55rem;">
             <div class="row no-gutters">
@@ -54,42 +55,35 @@ function searchSpotify(artist) {
         `);
     // Append the HTML Jumbotron
     $("#artistCard").append(bandDetails);
-    //
-    // console.log(response);
-    //top albums
 
-    var number = 0 - 1;
+    // TOP ALBUMS
     response.albums.items.forEach(function (album) {
       number++;
-      console.log(number);
-      // console.log(`this one ${album.data.name}`);
-      var albumBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
+
+      var albumCard =
+        $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.albums.items[number].data.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
   
     <p class="card-text"><h6>${album.data.name}</h6></p>
   </div>
 </div>`);
-      // albumBtn
-      //   .text(album.data.name)
-      //   .addClass("removeMe m-2 bg-primary badge-pill");
-      $("#trendingMain").append(albumBtn);
+      $("#trendingMain").append(albumCard);
     });
-    //top tracks
-    var numberTwo = 0 - 1;
+
+    // TOP TRACKS
+
     response.tracks.items.forEach(function (track) {
       numberTwo++;
-      // console.log(response.tracks.items);
-      var trackBtn = $(`<div class="card hoverEffect m-2" style="width: 18rem;">
+
+      var trackCard =
+        $(`<div class="card hoverEffect m-2" style="width: 18rem;">
   <img src="${response.tracks.items[numberTwo].data.albumOfTrack.coverArt.sources[0].url}" class="card-img-top" alt="...">
   <div class="card-body">
     <p class="card-text">${response.tracks.items[numberTwo].data.name}</p>
   </div>
 </div>`);
-      // trackBtn
-      //   .text(track.data.name)
-      //   .addClass("removeMe m-2 bg-success badge-pill");
-      $("#trendingSide").append(trackBtn);
+      $("#trendingSide").append(trackCard);
     });
   });
 }
