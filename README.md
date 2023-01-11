@@ -37,8 +37,11 @@ Local Storage Persists:
 
 User Story:  
 As A user
+
 I WANT a webpage application that searches the name of given music artist or band. 
+
 &, Displays selected artist’s information via Spotify & a second API. 
+
 To learn more about music.
 
 The Challenges 
