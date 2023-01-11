@@ -1,4 +1,7 @@
 function searchSpotify(artist) {
+
+  var artistName;
+
   // console.log(number);
   const settings = {
     async: true,
@@ -22,7 +25,7 @@ function searchSpotify(artist) {
       artistBtn
         .text(artist.data.profile.name)
         .addClass("btn m-2 removeMe btn-info badge-pill");
-      $("#jumbotron").append(artistBtn);
+      $("#bandsRelated").append(artistBtn);
       artistBtn.on("click", function (event) {
         console.log(event);
         event.data = this.innerHTML;
@@ -34,6 +37,9 @@ function searchSpotify(artist) {
         displaySearchHistory();
       });
     });
+
+    // Artist name to build the title
+    artistName = response.artists.items[0].data.profile.name;
 
     var bandDetails = $(`
         <div class="card mb-3" style="width: 55rem;">
@@ -52,11 +58,20 @@ function searchSpotify(artist) {
             </div>
         </div>
         `);
-    // Append the HTML Jumbotron
+
+    // Append the HTML Bands Related Title HTML
+    var bandsRelatedTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Bands related to ` + artistName + `</h6></div>`);
+    $("#bandsRelatedTitle").append(bandsRelatedTitle);
+
+    // Append the HTML Bands Related HTML
     $("#artistCard").append(bandDetails);
     //
     // console.log(response);
+
     //top albums
+
+    var albumSecTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top ` + artistName + ` albums</h6></div>`);
+    $("#albumsTitle").append(albumSecTitle);
 
     var number = 0 - 1;
     response.albums.items.forEach(function (album) {
@@ -75,7 +90,12 @@ function searchSpotify(artist) {
       //   .addClass("removeMe m-2 bg-primary badge-pill");
       $("#trendingMain").append(albumBtn);
     });
+
     //top tracks
+
+    var tracksSecTitle = $(`<div class="alert alert-secondary" role="alert" style="width: 25rem;"><h6>Top ` + artistName + ` tracks</h6></div>`);
+    $("#tracksTitle").append(tracksSecTitle);
+
     var numberTwo = 0 - 1;
     response.tracks.items.forEach(function (track) {
       numberTwo++;

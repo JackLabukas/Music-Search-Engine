@@ -6,14 +6,23 @@ const bingAPIKey = "3e70745433msh5b5d84a00b5ac8ap1bcb9ejsna003a7322f06";
 
 // Clear all HTML elements
 function clearHTML() {
-  // Function to empty out the artistCard element (bandsintown facts)
+  // Function to empty out the artistCard element (sportify API)
   $("#artistCard").empty();
 
-  // Function to empty out the jumbotron element (wikipedia facts)
-  $("#jumbotron").empty();
+  // Function to empty the bands related title section
+  $("#bandsRelatedTitle").empty();
 
-  // Function to empty out the trendingMain element (sportify albums)
+  // Function to empty out the related artist to element (sportify API)
+  $("#bandsRelated").empty();
+
+  // Function to empty the albuns title section
+  $("#albumsTitle").empty();
+
+  // Function to empty out the albums section (sportify API)
   $("#trendingMain").empty();
+
+  // Function to empty out the tracks section (sportify API)
+  $("#tracksTitle").empty();
 
   // Function to empty out the trendingSide element (sportify tracks)
   $("#trendingSide").empty();
@@ -61,7 +70,7 @@ function checkSearch(userSearch) {
   $.ajax(settings).done(function (response) {
     console.log(response);
     // Check the response length
-    if (response.artists.totalCount === 0) {
+    if (response === null) {
       // Display an alert for invalid user search
       document.getElementById("ms-alert").style.visibility = "visible";
     } else {
