@@ -58,11 +58,6 @@ In response to my input the page displays relevant information. <br/>
 The project managment space: 
 [https://trello.com/b/zVBXZjZE/mse ]
 
-### Mock-Up
-
-The images below illustrates the Music Search Engine web page appearance:    
-![musicsearchengionepicture](https://user-images.githubusercontent.com/115717787/212172943-9bb39a0c-7584-45d6-8153-84d67ea8555b.png)
-
 
 ### Links
 * Github Repository - https://jacklabukas.github.io/Music-Search-Engine/
