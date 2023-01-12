@@ -15,11 +15,14 @@ Spotify API:
  * Presents the top 8 related artist/bands buttons - when clicked, these navigate to the respective artist/band's page.  
  
  
+ 
 Microsoft Bing API:  
  * The page background updates & displays an image of the artist/band
  
+ 
 Local Storage Persists: 
   * &, prints the user's search history. 
+     
      
 ### Built with
 * HTML
@@ -33,7 +36,7 @@ Local Storage Persists:
 
 ### Mock-Up
 
-The images below illustrates the Weather Dashboard web page appearance: 
+The images below illustrates the Music Search Engine's web page appearance: 
 ![musicsearchengionepicture](https://user-images.githubusercontent.com/115717787/212173684-fe1bb649-71b9-431a-b6d9-354d4a77afdb.png)
 
 
@@ -45,14 +48,15 @@ In response to my input the page displays relevant information.
 
 
 ### The Challenges 
-Free API Call Limits & permamiters
-Agreeing on a concept & intergrating multipule APIs
-Identifying viable APIs with relevant functionality
-Using agile development methodologies to work collaboratively
-Collectively developing & improving functionality
+* Free API Call Limits & permamiters
+* Agreeing on a concept & intergrating multipule APIs
+* Identifying viable APIs with relevant functionality
+* Using agile development methodologies to work collaboratively
+* Collectively developing & improving functionality
 
 
 ### Project Management Tool: 
+The project managment space: 
 [https://trello.com/b/zVBXZjZE/mse ]
 
 ### Mock-Up
@@ -79,4 +83,4 @@ If you require any further information, feel free to contact me at:
 * LinkedIn: https://www.linkedin.com/in/jack-labukas-5bb038b7/?originalSubdomain=uk
 
 ---
-### Licensed under the [MIT license]
+### Licensed under the MIT license
