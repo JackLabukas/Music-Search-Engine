@@ -44,7 +44,7 @@ function searchSpotify(artist) {
 
     // Append the HTML Bands Related Title
     var bandsRelatedTitle = $(
-      `<h1 class="removeMe mediaQuery text-light display-4 bg-dark badge-pill">ARTISTS RELATED TO ` +
+      `<h1 class="removeMe mediaQuery text-light display-4 bg-dark badge-pill" style="font-size: 3vw;">ARTISTS RELATED TO ` +
         artistName +
         `</h1>`
     );
@@ -74,7 +74,7 @@ function searchSpotify(artist) {
     });
     // Append the HTML Band Albums Title -->
     var albumsTitle = $(
-      `<h1 class="display-3 mediaQuery text-light bg-dark badge-pill">TOP ` +
+      `<h1 class="display-3 mediaQuery text-light bg-dark badge-pill" style="font-size: 3vw;">TOP ` +
         artistName +
         ` ALBUMS </h1>`
     );
@@ -101,7 +101,7 @@ function searchSpotify(artist) {
     //top tracks
 
     var tracksSecTitle = $(
-      `<h1 class="display-3 mediaQuery text-light bg-dark badge-pill">TOP ` +
+      `<h1 class="display-3 mediaQuery text-light bg-dark badge-pill" style="font-size: 3vw;">TOP ` +
         artistName +
         ` TRACKS</h1>`
     );
