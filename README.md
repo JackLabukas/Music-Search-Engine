@@ -1,39 +1,41 @@
 # Music-Search-Engine
+
+### Repository
+
+###The Description 
+
+An interactive webpapge which allows users to search for information on musicians or bands. 
+Following their search input: 
+
+Spotify API:
+ * Displays an image of the artist/band
+ * Displays the artist/band name & top Spotify playlist
+ * Presents names & images of the artist/band's - top 8 tracks 
+ * Presents names & images of the artist/band's - top 8 tracks 
+ * Presents the top 8 related artist/bands buttons - when clicked, these navigate to the respective artist/band's page.  
  
-The Requirements & Task Overview:  
-
-To work collaboratively, as a project group to build a front-end web application. 
-
-As a team we are tasked with conceiving & executing a design that solves a real-world problem. 
-
-By integrating data received from multiple server-side API requests. 
-Employing agile development methodologies to integrate 2 server side APIs. 
-
-Using Bootstrap techniques to curate an interactive & polished UI. 
-
-Establishing client-side storage to store & persistent data.
-
-The Idea: 
-
-Front-end web application
-
-User inputs musician or band
-The MS Bing API updates the background with an image of the band 
-Related artists results, generate buttons & when clicked navigates to the respective musician's page.  
-Local storage saves & displays the user's search history 
-
-via Spotify API: 
-    Displays Top 10 Related Artists
-    Prints Image Data
-    Displays Top 10 Tracks 
-    Display Top 10 Albums
-
-via MS Bing API: 
-    Updates background image to artist or band 
-   
-
+ 
+Microsoft Bing API:  
+ * The page background updates & displays an image of the artist/band
+ 
 Local Storage Persists: 
-    User's search history 
+    &, prints to the bottom of the page - the user's search history. 
+    
+### Built with
+
+* HTML
+* CSS
+* JavaScript
+* BootStrap
+* jQuery
+* Spotify API 
+* Microsoft Bing API 
+* Pexels 
+
+### Mock-Up
+
+The images below illustrates the Weather Dashboard web page appearance: 
+
 
 User Story:  
 As A user
@@ -54,42 +56,59 @@ Collectively developing & improving functionality
 Deciding on Git workflow & agreed methodology for pull requests
 Using Trello team technology - to collaborate efficiently & effectively
 A movement away from Bands in Town API, due to restricted database & unaligned capabilities
-
-Breakdown of Tasks/Team Contributions: 
-Rui:   
-To implement Bootstrap methods to curate page design 
-To combine APIs & Local Storage 
-To introduce HTML framework 
-Identify & integrate a second API
-
-Kassy:  
-Presenting 
-Assisting with Spotify API 
-Generating ReadMe file 
-Project management 
-Copywriting
-
-Jack:  
-Implementing Spotify Functionality 
-Implementing dual API functionality
-
-Considerations:  
-Naming conventions - Team meeting to agree 
 API call limitations - e.g. Wiki is 200 per day
-Page opens with background image   
-Saving user search history to local storage 
-Navigate back to homepage/top with logo 
-Agreed structure - 1 HTML page 
-Footer to display user search history  
-Homepage is going to be clean only holding background image & search bar  
-Team/Who built this page? Links to team's Github pages & LinkedIn 
 
 Project Management Tool: 
 https://trello.com/b/zVBXZjZE/mse 
-screenshoot 
 
-Communication Tool 
-Slack group screenshot
 
 The Wireframe
 Wireframing Example:  https://www.midomi.com/ 
+
+### Licensed under the [MIT license]
+
+
+### Mock-Up
+
+The images below illustrates the Weather Dashboard web page appearance:    
+
+https://user-images.githubusercontent.com/91415469/210137964-0889ef4f-f280-4cae-834d-6cb76446f63f.mp4
+
+### Contributing
+
+Why you should contribute to an open-source project?  
+Contributing to open-source is a rewarding way to learn, teach, and build experience in just about any skill.
+You don’t have to contribute code, there’s always a task for you on an open-source project.
+Besides coding, you can contribute to user interface design, graphic design, writing, or organizing.
+
+Ways you can contribute:
+
+* [Submit bugs and feature requests](https://github.com/CZ-RBelo/WeatherDashboard/issues)
+* [Review source code changes](https://github.com/CZ-RBelo/WeatherDashboard/pulls)
+
+> **Spell check errors**  
+>Pull requests that fix spell-check errors are welcomed.  
+>If you want to give feedback or report an issue, please create a [new GitHub issue](https://github.com/CZ-RBelo/WeatherDashboard/issues/new).  
+>**Please check if a topic about your issue already exists!**
+
+### Links
+
+* [Github Repository](https://github.com/CZ-RBelo/WeatherDashboard)
+* [Deployed Application](https://cz-rbelo.github.io/WeatherDashboard)
+
+### Credits
+
+* [The New York Times API](https://www.nytimes.com/)
+* [OpenWeather API](https://openweathermap.org/)
+* [Bootstrap](https://getbootstrap.com/)
+
+### Contacts
+
+If you require any further information, feel free to contact me at:
+ 
+* Github Profile: [CZ-RBELO](https://github.com/CZ-RBelo/)  
+* Email: [jr.belo@hotmail.com](mailto:jr.belo@hotmail.com)
+* LinkedIn: [Rui Belo](https://linkedin.com/in/ruibelo)
+
+---
+### Licensed under the [MIT license](https://github.com/CZ-RBelo/WeatherDashboard/blob/main/LICENSE)
