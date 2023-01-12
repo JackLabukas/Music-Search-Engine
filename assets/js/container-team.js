@@ -1,33 +1,33 @@
 function displayTeam() {
+  var team = [
+    {
+      name: "Jack Labukas",
+      linkedin: "https://www.linkedin.com/in/jack-labukas-5bb038b7/",
+      github: "https://github.com/JackLabukas",
+      email: "labukasgediminas@gmail.com",
+      tasks:
+        "-Implementing Spotify Functionality <br> -Implementing dual API functionality ",
+    },
+    {
+      name: "Kassy Essiet",
+      linkedin: "https://www.linkedin.com/in/kassy-essiet-labukas-581a34122/",
+      github: "https://github.com/KE-L",
+      tasks:
+        "-Presenting<br>Assisting with Spotify API<br>-Generating Documentation ie ReadMe<br>-Coordinate Project management tool",
+    },
+    {
+      name: "Rui Belo",
+      linkedin: "https://linkedin.com/in/ruibelo",
+      github: "https://github.com/CZ-RBelo/",
+      email: "jr.belo@hotmail.com",
+      tasks:
+        "-Implementing Bootstrap methods<br>-Combining APIs and Local Storage<br>-Introducing the HTML structure<br>-Implementing MS Bing Search API ",
+    },
+  ];
 
-    var team =
-        [
-            {
-                name: 'Jack Labukas',
-                linkedin: 'https://www.linkedin.com/in/jack-labukas-5bb038b7/',
-                github: 'https://github.com/JackLabukas',
-                email: 'labukasgediminas@gmail.com',
-                tasks: 'Implementing Spotify Functionality \n Implementing dual API functionality '
-            },
-            {
-                name: 'Kassy Essiet',
-                linkedin: 'https://www.linkedin.com/in/kassy-essiet-labukas-581a34122/',
-                github: 'https://github.com/KE-L',
-                tasks: 'Presenting\nAssisting with Spotify API\nGenerating Documentation ie ReadMe\nCoordinate Project management tool'
-            },
-            {
-                name: 'Rui Belo',
-                linkedin: 'https://linkedin.com/in/ruibelo',
-                github: 'https://github.com/CZ-RBelo/',
-                email: 'jr.belo@hotmail.com',
-                tasks: 'Implementing Bootstrap methods\nCombining APIs and Local Storage\nIntroducing the HTML structure\nImplementing MS Bing Search API '
-            }
-        ]   
-
-    for (var i = 0; i < team.length; i++) {
-
-        // Build the html card
-        var teamCard = $(`
+  for (var i = 0; i < team.length; i++) {
+    // Build the html card
+    var teamCard = $(`
         <div class="col-sm-4">
             <div class="card bg-light">
                 <div class="card-body">
@@ -46,7 +46,7 @@ function displayTeam() {
             </div>
         </div>`);
 
-        // Append the HTML Card
-        $("#team").append(teamCard);
-    }    
-};
+    // Append the HTML Card
+    $("#team").append(teamCard);
+  }
+}
