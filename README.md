@@ -2,12 +2,12 @@
 
 ### Repository
 
-###The Description 
+### The Description 
 
 An interactive webpapge which allows users to search for information on musicians or bands. 
 Following their search input: 
 
-Spotify API:
+## Spotify API:
  * Displays an image of the artist/band
  * Displays the artist/band name & top Spotify playlist
  * Presents names & images of the artist/band's - top 8 tracks 
@@ -15,10 +15,10 @@ Spotify API:
  * Presents the top 8 related artist/bands buttons - when clicked, these navigate to the respective artist/band's page.  
  
  
-Microsoft Bing API:  
+## Microsoft Bing API:  
  * The page background updates & displays an image of the artist/band
  
-Local Storage Persists: 
+## Local Storage Persists: 
     &, prints to the bottom of the page - the user's search history. 
     
 ### Built with
@@ -36,35 +36,28 @@ Local Storage Persists:
 The images below illustrates the Weather Dashboard web page appearance: 
 
 
-User Story:  
-As A user
+### User Story:  
+As a user; 
+I want a web application which allows me to search for music artists & bands. 
+In response to my input the page displays relevant information. 
+&, links to discover new artists/bands. 
 
-I WANT a webpage application that searches the name of given music artist or band. 
 
-&, Displays selected artist’s information via Spotify & a second API. 
-
-To learn more about music.
-
-The Challenges 
-Agreeing the concept  
-Identifying viable APIs with relevant functionality 
-Integrating multiple APIs
+### The Challenges 
+Free API Call Limits & permamiters
+Agreeing on a concept & intergrating multipule APIs
+Identifying viable APIs with relevant functionality
 Using agile development methodologies to work collaboratively
-Connecting regularly as a team debug & improve design 
-Collectively developing & improving functionality 
-Deciding on Git workflow & agreed methodology for pull requests
-Using Trello team technology - to collaborate efficiently & effectively
-A movement away from Bands in Town API, due to restricted database & unaligned capabilities
-API call limitations - e.g. Wiki is 200 per day
+Collectively developing & improving functionality
+
 
 ### Project Management Tool: 
-https://trello.com/b/zVBXZjZE/mse 
+[https://trello.com/b/zVBXZjZE/mse ]
 
 ### Mock-Up
 
 The images below illustrates the Music Search Engine web page appearance:    
-![image](https://user-images.githubusercontent.com/115717787/212169999-cbea0fb0-cbe3-48e7-839e-5860065d59e4.png)
-
+Music Search Engine2.gif
 
 ### Links
 * Github Repository 
