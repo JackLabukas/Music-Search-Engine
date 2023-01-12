@@ -3,13 +3,6 @@ function displayTeam() {
     var team =
         [
             {
-                name: 'Amal Hussein',
-                linkedin: '#',
-                github: '#',
-                email: 'amula9986.ah@gmail.com',
-                tasks: 'TBC'
-            },
-            {
                 name: 'Jack Labukas',
                 linkedin: 'https://www.linkedin.com/in/jack-labukas-5bb038b7/',
                 github: 'https://github.com/JackLabukas',
@@ -35,7 +28,7 @@ function displayTeam() {
 
         // Build the html card
         var teamCard = $(`
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <div class="card bg-light">
                 <div class="card-body">
                     <div class="card-header">
