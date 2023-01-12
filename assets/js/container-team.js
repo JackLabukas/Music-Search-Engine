@@ -29,7 +29,7 @@ function displayTeam() {
     // Build the html card
     var teamCard = $(`
         <div class="col-sm-4">
-            <div class="card bg-light">
+            <div class="card bg-light" style='width:350px'>
                 <div class="card-body">
                     <div class="card-header">
                         <h5>${team[i].name}</h5>
