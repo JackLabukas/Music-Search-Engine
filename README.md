@@ -4,8 +4,8 @@
 
 ### The Description 
 
-An interactive webpapge which allows users to search for information on musicians or bands. 
-Following their search input: 
+An interactive webpapge which allows users to search for information on musicians or bands. <br/>
+Following their search input: <br/>
 
 Spotify API:
  * Displays an image of the artist/band
