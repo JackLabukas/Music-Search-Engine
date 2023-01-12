@@ -20,23 +20,6 @@ function searchSpotify(artist) {
     var number = 0 - 1;
     var numberTwo = 0 - 1;
     // artist button
-    response.artists.items.forEach(function (artist) {
-      var artistBtn = $(`<button>`);
-      artistBtn
-        .text(artist.data.profile.name)
-        .addClass("btn m-2 removeMe btn-success badge-pill");
-      $("#bandsRelated").append(artistBtn);
-      artistBtn.on("click", function (event) {
-        console.log(event);
-        event.data = this.innerHTML;
-        // clearDisplay();
-        clearHTML();
-        searchSpotify(event.data);
-        searchBing(event.data);
-        saveSearch(event.data);
-        displaySearchHistory();
-      });
-    });
 
     // Artist name to build the title
     artistName = response.artists.items[0].data.profile.name;
@@ -65,14 +48,30 @@ function searchSpotify(artist) {
         artistName +
         `</h1>`
     );
-    $("#bandsRelatedTitle").append(bandsRelatedTitle);
+    $("#relatedArtists").append(bandsRelatedTitle);
 
     // Append the HTML Bands Related HTML
     $("#artistCard").append(bandDetails);
     //
     // console.log(response);
     //top albums
-
+    response.artists.items.forEach(function (artist) {
+      var artistBtn = $(`<button>`);
+      artistBtn
+        .text(artist.data.profile.name)
+        .addClass("btn m-2 removeMe btn-success badge-pill");
+      $("#relatedArtistsButton").append(artistBtn);
+      artistBtn.on("click", function (event) {
+        console.log(event);
+        event.data = this.innerHTML;
+        // clearDisplay();
+        clearHTML();
+        searchSpotify(event.data);
+        searchBing(event.data);
+        saveSearch(event.data);
+        displaySearchHistory();
+      });
+    });
     // Append the HTML Band Albums Title -->
     var albumsTitle = $(
       `<h1 class="display-3 text-light bg-dark badge-pill">TOP ` +
