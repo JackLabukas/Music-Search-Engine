@@ -22,7 +22,6 @@ Local Storage Persists:
     &, prints to the bottom of the page - the user's search history. 
     
 ### Built with
-
 * HTML
 * CSS
 * JavaScript
@@ -58,57 +57,32 @@ Using Trello team technology - to collaborate efficiently & effectively
 A movement away from Bands in Town API, due to restricted database & unaligned capabilities
 API call limitations - e.g. Wiki is 200 per day
 
-Project Management Tool: 
+### Project Management Tool: 
 https://trello.com/b/zVBXZjZE/mse 
-
-
-The Wireframe
-Wireframing Example:  https://www.midomi.com/ 
-
-### Licensed under the [MIT license]
-
 
 ### Mock-Up
 
-The images below illustrates the Weather Dashboard web page appearance:    
+The images below illustrates the Music Search Engine web page appearance:    
+![image](https://user-images.githubusercontent.com/115717787/212169999-cbea0fb0-cbe3-48e7-839e-5860065d59e4.png)
 
-https://user-images.githubusercontent.com/91415469/210137964-0889ef4f-f280-4cae-834d-6cb76446f63f.mp4
-
-### Contributing
-
-Why you should contribute to an open-source project?  
-Contributing to open-source is a rewarding way to learn, teach, and build experience in just about any skill.
-You don’t have to contribute code, there’s always a task for you on an open-source project.
-Besides coding, you can contribute to user interface design, graphic design, writing, or organizing.
-
-Ways you can contribute:
-
-* [Submit bugs and feature requests](https://github.com/CZ-RBelo/WeatherDashboard/issues)
-* [Review source code changes](https://github.com/CZ-RBelo/WeatherDashboard/pulls)
-
-> **Spell check errors**  
->Pull requests that fix spell-check errors are welcomed.  
->If you want to give feedback or report an issue, please create a [new GitHub issue](https://github.com/CZ-RBelo/WeatherDashboard/issues/new).  
->**Please check if a topic about your issue already exists!**
 
 ### Links
-
-* [Github Repository](https://github.com/CZ-RBelo/WeatherDashboard)
-* [Deployed Application](https://cz-rbelo.github.io/WeatherDashboard)
+* Github Repository 
+* Deployed Application
 
 ### Credits
-
-* [The New York Times API](https://www.nytimes.com/)
-* [OpenWeather API](https://openweathermap.org/)
-* [Bootstrap](https://getbootstrap.com/)
+* Pexels - https://www.pexels.com/
+* MS Bing API - https://www.microsoft.com/en-us/bing/apis/bing-web-search-api
+* Spotify API - https://developer.spotify.com/
+* Bootstrap - (https://getbootstrap.com/)
 
 ### Contacts
 
 If you require any further information, feel free to contact me at:
  
-* Github Profile: [CZ-RBELO](https://github.com/CZ-RBelo/)  
-* Email: [jr.belo@hotmail.com](mailto:jr.belo@hotmail.com)
-* LinkedIn: [Rui Belo](https://linkedin.com/in/ruibelo)
+* Github Profile:
+* Email:
+* LinkedIn: 
 
 ---
-### Licensed under the [MIT license](https://github.com/CZ-RBelo/WeatherDashboard/blob/main/LICENSE)
+### Licensed under the [MIT license]
