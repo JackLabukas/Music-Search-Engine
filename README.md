@@ -8,7 +8,7 @@ Following their search input: <br/>
 Spotify API:
  * Displays an image of the artist/band
  * Displays the artist/band name & top Spotify playlist
- * Presents names & images of the artist/band's - top 8 tracks 
+ * Presents names & images of the artist/band's - top 8 albums 
  * Presents names & images of the artist/band's - top 8 tracks 
  * Presents the top 8 related artist/bands buttons - when clicked, these navigate to the respective artist/band's page.  
  
