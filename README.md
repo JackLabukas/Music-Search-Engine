@@ -41,10 +41,10 @@ The images below illustrates the Music Search Engine's web page appearance:
 
 
 ### User Story:  
-As a user; 
-I want a web application which allows me to search for music artists & bands. 
-In response to my input the page displays relevant information. 
-&, links to discover new artists/bands. 
+As a user; <br/>
+I want a web application which allows me to search for music artists & bands. <br/>
+In response to my input the page displays relevant information. <br/>
+&, links to discover new artists/bands. <br/>
 
 
 ### The Challenges 
