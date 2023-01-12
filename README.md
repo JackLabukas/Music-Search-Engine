@@ -5,7 +5,7 @@
 An interactive webpapge which allows users to search for information on musicians or bands. <br/>
 Following their search input: <br/>
 
-Spotify API:
+Spotify API Returns:
  * Displays an image of the artist/band
  * Displays the artist/band name & top Spotify playlist
  * Presents names & images of the artist/band's - top 8 albums 
@@ -14,7 +14,7 @@ Spotify API:
  
  
  
-Microsoft Bing API:  
+Microsoft Bing API Returns:  
  * The page background updates & displays an image of the artist/band
  
  
