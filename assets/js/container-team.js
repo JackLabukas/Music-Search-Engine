@@ -13,7 +13,7 @@ function displayTeam() {
       linkedin: "https://www.linkedin.com/in/kassy-essiet-labukas-581a34122/",
       github: "https://github.com/KE-L",
       tasks:
-        "-Presenting<br>Assisting with Spotify API<br>-Generating Documentation ie ReadMe<br>-Coordinate Project management tool",
+        "-Presenting<br>-Assisting with Spotify API<br>-Generating Documentation ie ReadMe<br>-Coordinate Project management tool",
     },
     {
       name: "Rui Belo",
