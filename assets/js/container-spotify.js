@@ -44,7 +44,7 @@ function searchSpotify(artist) {
 
     // Append the HTML Bands Related Title
     var bandsRelatedTitle = $(
-      `<h1 class="text-light display-4 bg-dark badge-pill">ARTISTS RELATED TO ` +
+      `<h1 class="removeMe text-light display-4 bg-dark badge-pill">ARTISTS RELATED TO ` +
         artistName +
         `</h1>`
     );

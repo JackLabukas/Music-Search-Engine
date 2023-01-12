@@ -28,6 +28,10 @@ function clearHTML() {
 
   // Function to empty out the team element
   $("#team").empty();
+  // to remove artist
+  $("#relatedArtists").empty();
+  // to remove artist button
+  $("#relatedArtistsButton").empty();
 
   // Hde the invalid user search alert
   document.getElementById("ms-alert").style.visibility = "hidden";
