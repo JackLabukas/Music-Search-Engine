@@ -1,7 +1,5 @@
 # Music-Search-Engine
 
-### Repository
-
 ### The Description 
 
 An interactive webpapge which allows users to search for information on musicians or bands. <br/>
