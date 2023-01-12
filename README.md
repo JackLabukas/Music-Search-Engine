@@ -47,8 +47,8 @@ In response to my input the page displays relevant information. <br/>
 
 
 ### The Challenges 
-* Free API Call Limits & permamiters
-* Agreeing on a concept & intergrating multipule APIs
+* Free API Call Limits & perimeters
+* Agreeing on a concept & integrating multiple APIs
 * Identifying viable APIs with relevant functionality
 * Using agile development methodologies to work collaboratively
 * Collectively developing & improving functionality
