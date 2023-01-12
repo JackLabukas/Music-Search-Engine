@@ -40,8 +40,8 @@ body {
   opacity: 0.9;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .mediaQuery {
     display: none !important;
   }
-}
+} */
