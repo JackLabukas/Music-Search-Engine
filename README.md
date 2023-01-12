@@ -32,7 +32,6 @@ Local Storage Persists:
 * jQuery
 * Spotify API 
 * Microsoft Bing API 
-* Pexels 
 
 ### Mock-Up
 
